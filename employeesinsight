@@ -1,0 +1,449 @@
+<div data-cvs-id="162586" class="px-4">
+  <sdf-tab-group data-cvs-id="162587" arialabel="Navigate through different tabs for the searched employee">
+    <sdf-tab data-cvs-id="162588" active="" id="people-tab" value="people">People (21)</sdf-tab>
+    <sdf-tab data-cvs-id="162589" id="attributes-tab" value="attributes">Attributes (142)</sdf-tab>
+  </sdf-tab-group>
+  <div data-cvs-id="162592" role="tabpanel" aria-labeledby="people-tab" id="peopleTab" class="flex flex-col">
+    <div data-cvs-id="162593" class="flex flex-row flex-wrap items-start gap-y-8 overflow-y-auto h-lg py-4"
+      id="employeeDetails">
+      <sdf-box data-cvs-id="162594" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162595" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162596" slot="graphic" src="https://i.pravatar.cc/400?img=1"
+            label="Picture of Jessica Ng"></sdf-avatar>
+          <div data-cvs-id="162597" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162598"
+              href="https://canvas.synerg.prod.us.caas.oneadp.com/oneux-builder/viewer.html#/641c963e89c40f954f86514c/Profile%20Page"
+              class="underline" title="View Profile Page for Jessica Ng">Jessica Ng
+            </sdf-link><span data-cvs-id="162599">(Quyen
+              Ng)</span><span data-cvs-id="162600">Sr.Strategist</span><span data-cvs-id="162601">Pay Group:
+              1F2</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162602" class="md:col-span-5 flex flex-col gap-1 text-body-01 hidden md:flex"><span
+            data-cvs-id="162603">Employee
+            ID:
+            32530</span><span data-cvs-id="162604">Location: GA - Atlanta - Y2901</span><span data-cvs-id="162605">File
+            #: 123456</span></div>
+        <div data-cvs-id="162606" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162607" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card" id="contact-card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162608" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162609" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162610" slot="graphic" src="https://i.pravatar.cc/400?img=1"
+            label="Picture of Jessie Terrian"></sdf-avatar>
+          <div data-cvs-id="162611" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162612" href="/Profile Page" class="underline">Jessie Taliesn</sdf-link><span
+              data-cvs-id="162613">Customer
+              Service</span><span data-cvs-id="162614">Pay Group: 1F2</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162615" class="hidden md:flex md:col-span-5 flex flex-col gap-1 text-body-01"><span
+            data-cvs-id="162616">Employee ID:
+            32530</span><span data-cvs-id="162617">Location: GA - Atlanta - Y2901</span><span data-cvs-id="162618">File
+            #: 123456</span></div>
+        <div data-cvs-id="162619" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162620" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162621" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162622" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162623" slot="graphic" src="https://i.pravatar.cc/400?img=1"
+            label="Picture of Jessie Walker"></sdf-avatar>
+          <div data-cvs-id="162624" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162625" href="/Profile Page" class="underline">Jessie Walker</sdf-link><span
+              data-cvs-id="162626">EVP, Financial
+              Service</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162627" class="hidden md:flex md:col-span-5 flex flex-col gap-1 text-body-01"><span
+            data-cvs-id="162628">Location: GA
+            - Atlanta</span></div>
+        <div data-cvs-id="162629" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162630" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162631" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162632" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162633" slot="graphic" initials="DN" label="Picture of {DN}"></sdf-avatar>
+          <div data-cvs-id="162634" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162635" href="/Profile Page" class="underline">{Display Name}</sdf-link><span
+              data-cvs-id="162636">{Title}</span><span data-cvs-id="162637">Pay
+              Group: {value}</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162638" class="md:col-span-5 flex flex-col gap-1 text-body-01 hidden md:flex"><span
+            data-cvs-id="162639">Employee ID:
+            {ID ####}</span><span data-cvs-id="162640">Location:
+            {description} -
+            {code}</span><span data-cvs-id="162641">File
+            #: {value}</span></div>
+        <div data-cvs-id="162642" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162643" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162644" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162645" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162646" slot="graphic" initials="DN" label="Picture of {DN}"></sdf-avatar>
+          <div data-cvs-id="162647" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162648" href="/Profile Page" class="underline">{Display Name}</sdf-link><span
+              data-cvs-id="162649">{Title}</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162650" class="md:col-span-5 flex flex-col gap-1 text-body-01 hidden md:flex"><span
+            data-cvs-id="162651">Location:
+            {description}</span></div>
+        <div data-cvs-id="162652" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162653" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162654" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162655" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162656" slot="graphic" initials="DN" label="Picture of {DN}"></sdf-avatar>
+          <div data-cvs-id="162657" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162658" href="/Profile Page" class="underline">{Display Name}</sdf-link><span
+              data-cvs-id="162659">{Title}</span><span data-cvs-id="162660">Pay
+              Group: {value}</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162661" class="hidden md:flex md:col-span-5 flex flex-col gap-1 text-body-01"><span
+            data-cvs-id="162662">Employee ID:
+            {ID ####}</span><span data-cvs-id="162663">Location:
+            {description} -
+            {code}</span><span data-cvs-id="162664">File
+            #: {value}</span></div>
+        <div data-cvs-id="162665" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162666" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162667" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162668" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162669" slot="graphic" initials="DN" label="Picture of {DN}"></sdf-avatar>
+          <div data-cvs-id="162670" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162671" href="/Profile Page" class="underline">{Display Name}</sdf-link><span
+              data-cvs-id="162672">{Title}</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162673" class="hidden md:flex md:col-span-5 flex flex-col gap-1 text-body-01"><span
+            data-cvs-id="162674">Location:
+            {description}</span></div>
+        <div data-cvs-id="162675" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162676" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162677" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162678" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162679" slot="graphic" initials="DN" label="Picture of {DN}"></sdf-avatar>
+          <div data-cvs-id="162680" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162681" href="/Profile Page" class="underline">{Display Name}</sdf-link><span
+              data-cvs-id="162682">{Title}</span><span data-cvs-id="162683">Pay
+              Group: {value}</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162684" class="hidden md:flex md:col-span-5 flex flex-col gap-1 text-body-01"><span
+            data-cvs-id="162685">Employee
+            ID: {ID ####}</span><span data-cvs-id="162686">Location:
+            {description} -
+            {code}</span><span data-cvs-id="162687">File
+            #: {value}</span></div>
+        <div data-cvs-id="162688" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162689" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+      <sdf-box data-cvs-id="162690" variant="clear" layout="horizontal" spacing="none"
+        class="grid grid-cols-11 grid-flow-col w-full">
+        <sdf-flag-layout data-cvs-id="162691" graphic-alignment="center" class="col-span-5 gap-x-4">
+          <sdf-avatar data-cvs-id="162692" slot="graphic" initials="DN" label="Picture of {DN}"></sdf-avatar>
+          <div data-cvs-id="162693" slot="supporting-content" class="flex flex-col gap-1 text-body-01">
+            <sdf-link data-cvs-id="162694" href="/Profile Page" class="underline">{Display Name}</sdf-link><span
+              data-cvs-id="162695">{Title}</span>
+          </div>
+        </sdf-flag-layout>
+        <div data-cvs-id="162696" class="hidden md:flex md:col-span-5 flex flex-col gap-1 text-body-01"><span
+            data-cvs-id="162697">Location:
+            {description}</span></div>
+        <div data-cvs-id="162698" class="col-span-5 md:col-span-1 justify-self-end">
+          <sdf-button data-cvs-id="162699" emphasis="tertiary" icon-only="" icon="base-contact-card"
+            button-title="View Business Card"></sdf-button>
+        </div>
+      </sdf-box>
+    </div>
+    <div data-cvs-id="162700" id="searchFooter"
+      class="flex bg-white sticky bottom-0 justify-center gap-x-2 p-3 border-0 border-t-2 border-solid border-divider mt-4">
+      <sdf-icon data-cvs-id="162701" icon="action-search" class="text-action-default"></sdf-icon>
+      <sdf-link data-cvs-id="162702">Show all 21 results in the Directory</sdf-link>
+    </div>
+    <div data-cvs-id="162703" class="flex flex-col p-4 hidden" id="search-slidein">
+      <div data-cvs-id="162895" class="flex flex-row items-center flex-wrap gap-x-4">
+        <sdf-button data-cvs-id="162704" icon="nav-move-left" variant="text" class="self-start" id="backtoSearch">
+          Back to results</sdf-button>
+        <h1 data-cvs-id="162896" class="text-heading-05 font-bold m-0">Business Card</h1>
+      </div>
+      <div data-cvs-id="162705" class="grid grid-cols-2">
+        <div data-cvs-id="162706" class="col-span-2 md:col-span-1 flex flex-row items-start gap-x-2 py-4 px-2">
+          <sdf-avatar data-cvs-id="162707" slot="graphic" src="https://i.pravatar.cc/400?img=1"
+            label="View profile page of jessica Ng"></sdf-avatar>
+          <div data-cvs-id="162708" class="flex flex-col gap-y-4 text-body-01">
+            <div data-cvs-id="162709">
+              <sdf-link data-cvs-id="162710" class="underline text-heading-05">Jessica Ng</sdf-link>
+              <div data-cvs-id="162711">
+                <p data-cvs-id="162712" class="m-0">(Quyen Ng)</p>
+                <p data-cvs-id="162713" class="m-0">She/Her/Hers</p>
+                <p data-cvs-id="162714" class="m-0">Employee ID:
+                  32530</p>
+                <p data-cvs-id="162715" class="m-0">She/Her/Hers</p>
+                <p data-cvs-id="162716" class="m-0">Location: GA - Atlanta -
+                  Y2901</p>
+                <p data-cvs-id="162717" class="m-0">File #:
+                  123456</p>
+              </div>
+            </div>
+            <div data-cvs-id="162718">
+              <p data-cvs-id="162719" class="font-semibold  m-0">
+                <sdf-icon data-cvs-id="162720" icon="location" icon-title="location" class="mr-2"></sdf-icon>Location
+              </p>
+              <p data-cvs-id="162721" class="m-0">Location: GA - Atlanta - Y2901</p>
+            </div>
+            <div data-cvs-id="162722" class="m-0">
+              <sdf-icon data-cvs-id="162723" icon="action-email" icon-title="Mail"></sdf-icon>
+              <sdf-link data-cvs-id="162724" class="ml-2">jessicaNg@example.com</sdf-link>
+            </div>
+            <div data-cvs-id="162725" class="m-0">
+              <sdf-icon data-cvs-id="162726" icon="action-call" icon-title="phone number"></sdf-icon>
+              <sdf-link data-cvs-id="162727" class="ml-2">+1 (555) 555-5555</sdf-link>
+            </div>
+            <div data-cvs-id="162728">
+              <p data-cvs-id="162729" class="font-semibold  m-0">
+                <sdf-icon data-cvs-id="162730" icon="user-group" icon-title="department symbol" class="mr-2"></sdf-icon>
+                Department
+              </p>
+              <p data-cvs-id="162731" class="m-0">Human Resources</p>
+            </div>
+            <div data-cvs-id="162732" class="grid grid-cols-4">
+              <sdf-avatar data-cvs-id="162733" class="col-span-1" src="https://i.pravatar.cc/400?img=5"></sdf-avatar>
+              <div data-cvs-id="162734" class="col-span-3">
+                <p data-cvs-id="162735" class="font-semibold m-0">Reports To</p>
+                <sdf-link data-cvs-id="162736" size="sm">Wilcox Henry</sdf-link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-cvs-id="162737" class="text-body-01 col-span-2 md:col-span-1 flex flex-col gap-y-2">
+          <sdf-expandable-box data-cvs-id="162738" header="Person Information" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162739" header="Employee Profile" opened="" layout="vertical"
+            expand-label="Expand Submenu" collapse-label="Collapse Submenu">
+            <div data-cvs-id="162740" class="flex flex-col gap-y-1 pl-10 pt-4">
+              <sdf-link data-cvs-id="162741" href="/#">Eligible Link 1</sdf-link>
+              <sdf-link data-cvs-id="162742" href="/#">Eligible Link 2</sdf-link>
+            </div>
+          </sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162743" header="Job Activities" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162744" header="Employment" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162745" header="Talent Development" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162746" header="Benefits" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162747" header="Pay &amp; Taxes" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162748" header="History" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+          <sdf-expandable-box data-cvs-id="162749" header="Workforce Management" expand-label="Expand Submenu"
+            collapse-label="Collapse Submenu"></sdf-expandable-box>
+        </div>
+      </div>
+      <div data-cvs-id="162750"
+        class="text-body-01 sticky p-2 bottom-0 md:flex justify-center w-full bg-white border-t-2 border-solid border-divider border-b-0 border-l-0 border-r-0 border-action-default">
+        <sdfx-pagination data-cvs-id="162751" total-pages="20" current-page="1"></sdfx-pagination>
+      </div>
+    </div>
+  </div>
+  <div data-cvs-id="162752" role="tabpanel" aria-labeledby="attributes-tab" id="attributesTab"
+    class="flex flex-col gap-y-2 hidden overflow-y-auto">
+    <div data-cvs-id="162753"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      40 results in Division: <span data-cvs-id="162754" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162755"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      50 results in Sector: <span data-cvs-id="162756" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162757"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      2 results in Title: <span data-cvs-id="162758" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162759"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      20 results in Department: <span data-cvs-id="162760" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162761"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      40 results in Licenses: <span data-cvs-id="162762" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162763"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162764" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162765"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162766" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162767"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162768" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162769"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162770" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162771"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162772" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162773"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162774" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162775"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162776" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162777"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162778" class="text-action-primary font-bold">Tal</span></div>
+    <div data-cvs-id="162779"
+      class="flex-row items-center p-4 gap-x-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      {##} results in {section}: <span data-cvs-id="162780" class="text-action-primary font-bold">Tal</span></div>
+  </div>
+  <div data-cvs-id="162781" role="tabpanel" aria-labeledby="pages-tab" class="hidden text-body-01" id="pagesTab">
+    <div data-cvs-id="162782"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162783" href="" class="font-bold">Talent</sdf-link> | Myself
+      <p data-cvs-id="162784" class="m-0">Bacon ipsum dolor amet pig bacon ham hock, brisket flank salami chislic pork
+        loin.</p>
+    </div>
+    <div data-cvs-id="162785"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162786" href="" class="font-bold">Talent</sdf-link> | My Team
+      &gt; Team
+      <p data-cvs-id="162787" class="m-0">Tongue ribeye pork doner ham hock biltong tenderloin pancetta.</p>
+    </div>
+    <div data-cvs-id="162788"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162789" href="" class="font-bold">Total Rewards</sdf-link> |
+      Payroll
+      <p data-cvs-id="162790" class="m-0">Bacon ipsum dolor amet pig bacon ham hock, brisket flank salami chislic pork
+        loin.</p>
+    </div>
+    <div data-cvs-id="162791"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162792" href="" class="font-bold">Total Compensation</sdf-link> | Payroll &gt; Total
+      Rewards
+      <p data-cvs-id="162793" class="m-0">Bacon ipsum dolor amet pig bacon ham hock, brisket flank salami chislic pork
+        loin.</p>
+    </div>
+    <div data-cvs-id="162794"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162795" href="" class="font-bold">{Page Name}</sdf-link> |
+      {Page Location in IA}
+      <p data-cvs-id="162796" class="m-0">{page description}</p>
+    </div>
+    <div data-cvs-id="162797"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162798" href="" class="font-bold">{Page Name}</sdf-link> |
+      {Page Location in IA}
+      <p data-cvs-id="162799" class="m-0">{page description}</p>
+    </div>
+    <div data-cvs-id="162800"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162801" href="" class="font-bold">{Page Name}</sdf-link> |
+      {Page Location in IA}
+      <p data-cvs-id="162802" class="m-0">{page description}</p>
+    </div>
+    <div data-cvs-id="162803"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162804" href="" class="font-bold">{Page Name}</sdf-link> |
+      {Page Location in IA}
+      <p data-cvs-id="162805" class="m-0">{page description}</p>
+    </div>
+    <div data-cvs-id="162806"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162807" href="" class="font-bold">{Page Name}</sdf-link> |
+      {Page Location in IA}
+      <p data-cvs-id="162808" class="m-0">{page description}</p>
+    </div>
+    <div data-cvs-id="162809"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162810" href="" class="font-bold">{Page Name}</sdf-link> |
+      {Page Location in IA}
+      <p data-cvs-id="162811" class="m-0">{page description}</p>
+    </div>
+    <div data-cvs-id="162812"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162813" href="" class="font-bold">{Page Name}</sdf-link> |
+      {Page Location in IA}
+      <p data-cvs-id="162814" class="m-0">{page description}</p>
+    </div>
+  </div>
+  <div data-cvs-id="162815" role="tabpanel" aria-labeledby="content-tab" class="text-body-01 hidden" id="contentTab">
+    <div data-cvs-id="162816"
+      class="items-center p-2 border-b-1 border-t-0 border-solid border-l-0 border-r-0 border-divider">
+      <sdf-link data-cvs-id="162817" href="" class="font-bold">{Page Name}</sdf-link> | Search Associate
+      Portal Content, Sharepoint, ADP Works, and more.<p data-cvs-id="162818"></p>
+    </div>
+  </div>
+</div>
+<script data-cvs-id="162819">
+  const peopleTab = document.querySelector('#peopleTab');
+  const attributesTab = document.querySelector('#attributesTab');
+  const pagesTab = document.querySelector('#pagesTab');
+  const contentTab = document.querySelector('#contentTab');
+  document.querySelector('sdf-tab-group').addEventListener('sdfChange', (evt) => {
+    if(evt.detail.value === "people") {
+      peopleTab.classList.remove('hidden');
+      attributesTab.classList.add('hidden');
+      pagesTab.classList.add('hidden');
+      contentTab.classList.add('hidden');
+    } else if(evt.detail.value === "attributes") {
+      peopleTab.classList.add('hidden');
+      attributesTab.classList.remove('hidden');
+      pagesTab.classList.add('hidden');
+      contentTab.classList.add('hidden');
+    } else if(evt.detail.value === "pages") {
+      peopleTab.classList.add('hidden');
+      attributesTab.classList.add('hidden');
+      pagesTab.classList.remove('hidden');
+      contentTab.classList.add('hidden');
+    } else if(evt.detail.value === "content") {
+      peopleTab.classList.add('hidden');
+      attributesTab.classList.add('hidden');
+      pagesTab.classList.add('hidden');
+      contentTab.classList.remove('hidden');
+    }
+  });
+  
+  const contactCard = document.querySelector('#contact-card');
+  const searchSlidein = document.querySelector('#search-slidein');
+  const employeeDetails = document.querySelector('#employeeDetails');
+  const searchFooter = document.querySelector('#searchFooter');
+  const backtoSearch = document.querySelector('#backtoSearch');
+  contactCard.addEventListener('click', () => {
+    searchSlidein.classList.remove('hidden');
+    searchSlidein.classList.add('block');
+    employeeDetails.classList.add('hidden');
+    searchFooter.classList.add('hidden');
+  });
+
+  backtoSearch.addEventListener('click', () => {
+    searchSlidein.classList.add('hidden');
+    searchSlidein.classList.remove('block');
+    employeeDetails.classList.remove('hidden');
+    searchFooter.classList.remove('hidden');
+  });
+</script>
