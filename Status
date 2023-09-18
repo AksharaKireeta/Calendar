@@ -1,0 +1,53 @@
+// StatusBox.js
+
+import React from 'react';
+
+const StatusBox = ({ leaveStatus }) => {
+  // Determine the checkbox color based on leaveStatus
+  const checkboxColor = leaveStatus === 'Approved' ? 'red' : 'green';
+
+  return (
+    <div>
+      <input
+        type="checkbox"
+        style={{ width: '20px', height: '20px', backgroundColor: checkboxColor }}
+        disabled
+      />
+    </div>
+  );
+};
+
+export default StatusBox;
+
+
+// App.js
+
+import React from 'react';
+import StatusBox from './StatusBox'; // Import the StatusBox component
+
+const employeeData = [
+  {
+    name: 'John Doe',
+    id: '123',
+    leaveStatus: 'Approved',
+    shiftTimings: '9 AM - 5 PM',
+  },
+  // Add more employee data objects as needed
+];
+
+function App() {
+  return (
+    <div>
+      {employeeData.map((employee, index) => (
+        <div key={index}>
+          <h3>{employee.name}</h3>
+          <p>ID: {employee.id}</p>
+          <StatusBox leaveStatus={employee.leaveStatus} /> {/* Pass leaveStatus as a prop */}
+          <p>Shift Timings: {employee.shiftTimings}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default App;
