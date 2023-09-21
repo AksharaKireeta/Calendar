@@ -1,0 +1,54 @@
+import React from "react";
+import { AppBar, Toolbar, IconButton, Typography, Box } from "@mui/material";
+import { Home, EmojiObjects, Info, ExitToApp } from "@mui/icons-material";
+import AppLogo from "./AppLogo"; // Import your app logo component or image
+
+const Header = () => {
+  return (
+    <AppBar position="static" style={{ backgroundColor: "#26328c" }}>
+      <Toolbar>
+        {/* App Logo */}
+        <AppLogo style={{ marginRight: 8 }} />
+
+        {/* App Name */}
+        <Typography variant="h6" style={{ color: "#222", fontWeight: "bold", fontFamily: "sans-serif", marginRight: 32 }}>
+          My Calendar
+        </Typography>
+
+        {/* Icons and Titles */}
+        <Box display="flex" alignItems="center">
+          {/* Home */}
+          <Box display="flex" flexDirection="column" alignItems="center" mx={2}>
+            <IconButton edge="start" color="inherit" aria-label="home">
+              <Home />
+            </IconButton>
+            <Typography variant="subtitle1">Home</Typography>
+          </Box>
+
+          {/* Insights */}
+          <Box display="flex" flexDirection="column" alignItems="center" mx={2}>
+            <IconButton edge="start" color="inherit" aria-label="brain">
+              <EmojiObjects />
+            </IconButton>
+            <Typography variant="subtitle1">Insights</Typography>
+          </Box>
+
+          {/* Contact Info */}
+          <Box display="flex" flexDirection="column" alignItems="center" mx={2}>
+            <IconButton edge="start" color="inherit" aria-label="info">
+              <Info />
+            </IconButton>
+            <Typography variant="subtitle1">Contact Info</Typography>
+          </Box>
+        </Box>
+
+        {/* Logout Button */}
+        <IconButton edge="end" color="inherit" aria-label="logout">
+          <ExitToApp />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
