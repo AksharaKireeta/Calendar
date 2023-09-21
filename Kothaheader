@@ -1,0 +1,78 @@
+import React from "react";
+import { AppBar, Toolbar, IconButton, Typography, Box, makeStyles } from "@mui/material";
+import { Home, EmojiObjects, Info, ExitToApp } from "@mui/icons-material";
+import AppLogo from "./AppLogo"; // Import your app logo component or image
+
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    backgroundColor: "#26328c",
+  },
+  appLogo: {
+    marginRight: theme.spacing(2),
+  },
+  appName: {
+    color: "#222",
+    fontWeight: "bold",
+    fontFamily: "sans-serif",
+    marginRight: theme.spacing(4),
+  },
+  iconsContainer: {
+    display: "flex",
+    alignItems: "center",
+  },
+  iconButton: {
+    marginLeft: theme.spacing(2),
+  },
+}));
+
+const Header = () => {
+  const classes = useStyles();
+
+  return (
+    <AppBar position="static" className={classes.appBar}>
+      <Toolbar>
+        {/* App Logo */}
+        <AppLogo className={classes.appLogo} />
+
+        {/* App Name */}
+        <Typography variant="h6" className={classes.appName}>
+          My Calendar
+        </Typography>
+
+        {/* Icons and Titles */}
+        <Box className={classes.iconsContainer}>
+          {/* Home */}
+          <Box display="flex" flexDirection="column" alignItems="center">
+            <IconButton edge="start" color="inherit" aria-label="home" className={classes.iconButton}>
+              <Home />
+            </IconButton>
+            <Typography variant="subtitle1">Home</Typography>
+          </Box>
+
+          {/* Insights */}
+          <Box display="flex" flexDirection="column" alignItems="center">
+            <IconButton edge="start" color="inherit" aria-label="brain" className={classes.iconButton}>
+              <EmojiObjects />
+            </IconButton>
+            <Typography variant="subtitle1">Insights</Typography>
+          </Box>
+
+          {/* Contact Info */}
+          <Box display="flex" flexDirection="column" alignItems="center">
+            <IconButton edge="start" color="inherit" aria-label="info" className={classes.iconButton}>
+              <Info />
+            </IconButton>
+            <Typography variant="subtitle1">Contact Info</Typography>
+          </Box>
+        </Box>
+
+        {/* Logout Button */}
+        <IconButton edge="end" color="inherit" aria-label="logout">
+          <ExitToApp />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
