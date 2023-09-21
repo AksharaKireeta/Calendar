@@ -1,0 +1,61 @@
+import React from "react";
+import EmployeeListCard from "./EmployeeListCard";
+import SickHoursPieChart from "./SickHoursPieChart";
+import TotalHoursPieChart from "./TotalHoursPieChart";
+import CasualHoursPieChart from "./CasualHoursPieChart";
+
+const TotalInsightsTry = () => {
+  return (
+    <div className="container">
+      {/* Employee Leave Data Card (Scrollable) */}
+      <div className="scrollable-card">
+        <EmployeeListCard />
+      </div>
+      {/* Sick Hours Pie Chart Card */}
+      <div className="fixed-card">
+        <SickHoursPieChart />
+      </div>
+      {/* Total Leave Hours Pie Chart Card */}
+      <div className="fixed-card">
+        <TotalHoursPieChart />
+      </div>
+      {/* Casual Hours Pie Chart Card */}
+      <div className="fixed-card">
+        <CasualHoursPieChart />
+      </div>
+    </div>
+  );
+};
+
+export default TotalInsightsTry;
+
+
+/* CSS for the TotalInsightsTry component */
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.fixed-card {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  flex: 1;
+  max-width: 300px;
+}
+
+.scrollable-card {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  flex: 1;
+  max-width: 300px;
+  overflow-y: auto; /* Enable vertical scrolling for the scrollable card */
+}
+
