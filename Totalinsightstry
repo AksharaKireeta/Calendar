@@ -1,0 +1,54 @@
+import React from "react";
+import EmployeeListCard from "./EmployeeListCard";
+import SickHoursPieChart from "./SickHoursPieChart";
+import TotalHoursPieChart from "./TotalHoursPieChart";
+import CasualHoursPieChart from "./CasualHoursPieChart";
+
+const TotalInsightsTry = () => {
+  return (
+    <div className="container">
+      <div className="side-by-side">
+        <div className="column">
+          <EmployeeListCard />
+        </div>
+        <div className="column">
+          <TotalHoursPieChart />
+        </div>
+      </div>
+      <div className="side-by-side">
+        <div className="column">
+          <SickHoursPieChart />
+        </div>
+        <div className="column">
+          <CasualHoursPieChart />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TotalInsightsTry;
+
+/* CSS for the TotalInsightsTry component */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+/* Add margin between rows */
+.side-by-side + .side-by-side {
+  margin-top: 20px;
+}
+
