@@ -1,0 +1,64 @@
+import React, { useEffect, useState } from "react";
+import { Pie } from "react-chartjs-2";
+
+const SickHoursPieChart = () => {
+  // Define your sickHoursData directly in the component
+  const [sickHoursData] = useState([
+    { empname: "John", sickhours: 8 },
+    { empname: "Sara", sickhours: 20 },
+    { empname: "Akshara", sickhours: 35 },
+    // Add more data here
+  ]);
+
+  useEffect(() => {
+    // Ensure that the canvas is cleared and existing charts are destroyed
+    const canvas = document.getElementById("sickHoursChart");
+    const context = canvas.getContext("2d");
+
+    if (canvas.chart) {
+      canvas.chart.destroy();
+    }
+
+    // Define pieData within the useEffect scope
+    const pieData = {
+      labels: sickHoursData.map((entry) => entry.empname),
+      datasets: [
+        {
+          data: sickHoursData.map((entry) => entry.sickhours),
+          backgroundColor: sickHoursData.map((entry) => getRandomColor()),
+        },
+      ],
+    };
+
+    // Create a new chart
+    const newChart = new Chart(context, {
+      type: "pie",
+      data: pieData,
+      options: {
+        // Chart options here
+      },
+    });
+
+    // Attach the new chart to the canvas
+    canvas.chart = newChart;
+  }, [sickHoursData]);
+
+  function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  return (
+    <div className="card">
+      <h2>Sick Hours</h2>
+      <canvas id="sickHoursChart" />
+    </div>
+  );
+};
+
+export default SickHoursPieChart;
+
