@@ -1,0 +1,97 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+const EmployeeListCard = () => {
+  const [employeeData, setEmployeeData] = useState([]);
+
+  useEffect(() => {
+    // Make an API request to fetch employee data from the backend
+    axios.get("backend_url_for_employee_data").then((response) => {
+      setEmployeeData(response.data);
+    });
+  }, []);
+
+  return (
+    <div className="card">
+      <h2>Employee Leave Data</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Leave Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {employeeData.map((employee) => (
+            <tr key={employee[0]}>
+              <td>{employee[0]}</td>
+              <td>{employee[1]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default EmployeeListCard;
+
+
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Pie } from "react-chartjs-2";
+
+const SickHoursPieChart = () => {
+  const [sickHoursData, setSickHoursData] = useState([]);
+
+  useEffect(() => {
+    // Make an API request to fetch sick hours data from the backend
+    axios.get("backend_url_for_sick_hours_data").then((response) => {
+      setSickHoursData(response.data);
+    });
+  }, []);
+
+  const pieData = {
+    labels: sickHoursData.map((entry) => entry.empname),
+    datasets: [
+      {
+        data: sickHoursData.map((entry) => entry.sickhours),
+        backgroundColor: sickHoursData.map((entry) => getRandomColor()),
+      },
+    ],
+  };
+
+  function getRandomColor() {
+    // Generate random colors for pie chart segments
+    // Implement this function as needed
+  }
+
+  return (
+    <div className="card">
+      <h2>Sick Hours</h2>
+      <Pie data={pieData} />
+    </div>
+  );
+};
+
+export default SickHoursPieChart;
+
+
+
+
+
+import React from "react";
+import EmployeeListCard from "./EmployeeListCard";
+import SickHoursPieChart from "./SickHoursPieChart";
+
+const App = () => {
+  return (
+    <div className="App">
+      <EmployeeListCard />
+      <SickHoursPieChart />
+    </div>
+  );
+};
+
+export default App;
