@@ -1,0 +1,29 @@
+import React from "react";
+import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
+import { Home, EmojiObjects, Info, ExitToApp } from "@mui/icons-material";
+
+const Header = () => {
+  return (
+    <AppBar position="static">
+      <Toolbar>
+        <IconButton edge="start" color="inherit" aria-label="home">
+          <Home />
+        </IconButton>
+        <IconButton edge="start" color="inherit" aria-label="brain">
+          <EmojiObjects />
+        </IconButton>
+        <IconButton edge="start" color="inherit" aria-label="info">
+          <Info />
+        </IconButton>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          Your App Name
+        </Typography>
+        <IconButton color="inherit" aria-label="logout">
+          <ExitToApp />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
