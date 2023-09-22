@@ -1,3 +1,94 @@
+import React, { useEffect, useState } from "react";
+import { Chart, registerables } from 'chart.js'
+import axios from 'axios';
+Chart.register(...registerables)
+
+const TotalHoursPieChart = () => {
+  const [leaveData, setLeaveData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the provided URL
+    axios
+      .get("http://localhost:8082/events/LeaveCount/JohnWick")
+      .then((response) => {
+        // Map the response data to calculate total leave hours for each employee
+        const data = Object.entries(response.data).map(([employeeName, leaveCount]) => ({
+          empname: employeeName,
+          totalhours: leaveCount * 8, // Calculate total leave hours
+        }));
+        setLeaveData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    // Create a Pie Chart
+    const canvas = document.getElementById("totalLeaveChart");
+    const context = canvas.getContext("2d");
+
+    if (canvas.chart) {
+      canvas.chart.destroy();
+    }
+
+    const pieData = {
+      labels: leaveData.map((entry) => entry.empname),
+      datasets: [
+        {
+          data: leaveData.map((entry) => entry.totalhours),
+          backgroundColor: leaveData.map((entry) => getRandomColor()), // Use random colors
+        },
+      ],
+    };
+
+    const newChart = new Chart(context, {
+      type: "pie",
+      data: pieData,
+      options: {
+        // Add custom chart options for styling
+        plugins: {
+          legend: {
+            display: false, // Hide legend
+          },
+          tooltip: {
+            callbacks: {
+              label: (context) => {
+                const label = context.dataset.labels[context.dataIndex];
+                const value = context.formattedValue;
+                return `${label}: ${value} hours`;
+              },
+            },
+          },
+        },
+      },
+    });
+
+    canvas.chart = newChart;
+  }, [leaveData]);
+
+  const getRandomColor = () => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  return (
+    <div className="card">
+      <h2>Total Leave Hours</h2>
+      <canvas id="totalLeaveChart" />
+    </div>
+  );
+};
+
+export default TotalHoursPieChart;
+
+
+
+
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
