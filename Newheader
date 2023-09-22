@@ -1,0 +1,35 @@
+import React from "react";
+import { Box } from "@mui/system";
+import { SfcShellAppBar, SfcShellAppBarIcon } from '@synerg/react-components';
+import { Home, EmojiObjects, Info, ExitToApp } from "@mui/icons-material";
+
+const Header = () => {
+  return (
+    <SfcShellAppBar data-cvs-id={5} size="small">
+      {/* Icons */}
+      <Box display="flex" alignItems="center">
+        {/* Home Icon */}
+        <SfcShellAppBarIcon aria-label="home">
+          <Home />
+        </SfcShellAppBarIcon>
+
+        {/* Insights Icon */}
+        <SfcShellAppBarIcon aria-label="brain">
+          <EmojiObjects />
+        </SfcShellAppBarIcon>
+
+        {/* Contact Info Icon */}
+        <SfcShellAppBarIcon aria-label="info">
+          <Info />
+        </SfcShellAppBarIcon>
+
+        {/* Logout Icon */}
+        <SfcShellAppBarIcon edge="end" aria-label="logout">
+          <ExitToApp />
+        </SfcShellAppBarIcon>
+      </Box>
+    </SfcShellAppBar>
+  );
+};
+
+export default Header;
