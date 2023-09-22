@@ -1,0 +1,107 @@
+//totalhours
+import React, { useEffect, useState } from "react";
+import { Chart, registerables } from 'chart.js'
+import axios from 'axios';
+Chart.register(...registerables)
+const TotalHoursPieChart = () => {
+  const[leaveData, setLeaveData]=useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8082/events/LeaveCount/JohnWick')
+    .then((response)=>{
+      const data =response.data.map((entry)=>({
+        empname:entry.employeeName,
+        totalhours:entry.leaveCount*8,
+      }));
+      setLeaveData(data);
+    })
+   .catch((error)=>{
+    console.error('error fetching data:',error);
+   });
+  },[]);
+  const getRandomColor=()=> {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+  useEffect(()=>{
+    const canvas = document.getElementById("totalHoursChart");
+    const context = canvas.getContext("2d");
+    if (canvas.chart) {
+      canvas.chart.destroy();
+    }
+    const pieData = {
+      labels: leaveData.map((entry) => entry.empname),
+      datasets: [
+        {
+          data: leaveData.map((entry) => entry.totalhours),
+          backgroundColor: leaveData.map((entry) => getRandomColor()),
+        },
+      ],
+    };
+    const newChart = new Chart(context, {
+      type: "pie",
+      data: pieData,
+      options: {
+      },
+    });
+    canvas.chart = newChart;
+  }, [leaveData]);
+  return (
+    <div className="card">
+       <h2>Total Leave Hours</h2>
+      <canvas id="totalHoursChart" />
+    </div>
+  );
+};
+
+//employee list card
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+const EmployeeListCard = () => {
+  const [leaveCountData, setLeaveCountData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get("http://localhost:8082/events/LeaveCount/JohnWick")
+      .then((response) => {
+        const data =Object.entries(response.data).map(([employeeName,leaveCount])=>({employeeName,leaveCount}));
+        setLeaveCountData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <div className="leave-count-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Leave Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {leaveCountData.map((entry, index) => (
+            <tr key={index}>
+              <td>{entry.employeeName}</td>
+              <td>{entry.leaveCount}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default EmployeeListCard;
