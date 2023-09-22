@@ -1,3 +1,56 @@
+import React from "react";
+import { Grid, Card, CardContent, Typography } from "@mui/material";
+import EmployeeListCard from "./EmployeeListCard"; // Import your Employee List Card component
+import SickHoursPieChart from "./SickHoursPieChart"; // Import your Sick Hours Pie Chart component
+import TotalHoursPieChart from "./TotalHoursPieChart"; // Import your Total Hours Pie Chart component
+import CasualHoursPieChart from "./CasualHoursPieChart"; // Import your Casual Hours Pie Chart component
+
+const Dashboard = () => {
+  return (
+    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h6">Employee List</Typography>
+            <EmployeeListCard />
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h6">Sick Hours Pie Chart</Typography>
+            <SickHoursPieChart />
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h6">Total Hours Pie Chart</Typography>
+            <TotalHoursPieChart />
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography variant="h6">Casual Hours Pie Chart</Typography>
+            <CasualHoursPieChart />
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
+  );
+};
+
+export default Dashboard;
+
+
+
+
+
+
 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
   <Grid item xs={6}>
     <Item>1</Item>
