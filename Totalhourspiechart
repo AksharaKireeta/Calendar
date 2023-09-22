@@ -1,3 +1,41 @@
+import React from "react";
+import { Grid } from "@mui/material";
+import EmployeeListCard from "./EmployeeListCard";
+import SickHoursPieChart from "./SickHoursPieChart";
+import TotalHoursPieChart from "./TotalHoursPieChart";
+import CasualHoursPieChart from "./CasualHoursPieChart";
+
+const Dashboard = () => {
+  return (
+    <Grid container spacing={2}>
+      {/* Card 1 */}
+      <Grid item xs={12} sm={6} md={6} lg={6}>
+        <EmployeeListCard />
+      </Grid>
+
+      {/* Card 2 */}
+      <Grid item xs={12} sm={6} md={6} lg={6}>
+        <SickHoursPieChart />
+      </Grid>
+
+      {/* Card 3 */}
+      <Grid item xs={12} sm={6} md={6} lg={6}>
+        <TotalHoursPieChart />
+      </Grid>
+
+      {/* Card 4 */}
+      <Grid item xs={12} sm={6} md={6} lg={6}>
+        <CasualHoursPieChart />
+      </Grid>
+    </Grid>
+  );
+};
+
+export default Dashboard;
+
+
+
+
 import React, { useEffect, useState } from "react";
 import { Chart, registerables } from 'chart.js'
 import axios from 'axios';
