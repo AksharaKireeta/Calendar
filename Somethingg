@@ -1,0 +1,62 @@
+import React, { useState, useEffect } from "react";
+
+const LeaveCountTable = () => {
+  const [leaveCountData, setLeaveCountData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Fetch data from the specified URL
+    fetch("http://localhost:8082/events/LeaveCount")
+      .then((response) => response.json())
+      .then((data) => {
+        setLeaveCountData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <div className="leave-count-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Leave Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {leaveCountData.map((entry, index) => (
+            <tr key={index}>
+              <td>{entry.employeeName}</td>
+              <td>{entry.leaveCount}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default LeaveCountTable;
+
+
+import React from "react";
+import LeaveCountTable from "./LeaveCountTable";
+
+const App = () => {
+  return (
+    <div className="app">
+      <h1>Employee Leave Count</h1>
+      <LeaveCountTable />
+    </div>
+  );
+};
+
+export default App;
