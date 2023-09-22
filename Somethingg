@@ -86,3 +86,27 @@ export default function DataGridProDemo() {
     </Box>
   );
 }
+
+// adpappbar
+import React, { PureComponent } from 'react'
+import { SfcShell, SfcShellAppBar, SfcShellAppBarIcon, SfcShellLeftNavV2 } from '@synerg/react-components';
+//   import { Box } from "@mui/system";
+//   import { Typography } from "@mui/material"; 
+export default class
+    extends PureComponent {
+    render() {
+        return (
+            <>
+                {/* <header data-cvs-id={21} className="py-0 px-1000 width:400vw h-auto hidden sm:block"> */}
+                    <SfcShellAppBar data-cvs-id={5} size="small">
+                        My Calendar
+                        
+                    </SfcShellAppBar>
+                {/* </header> */}
+            </>
+
+
+
+        )
+    }
+}
