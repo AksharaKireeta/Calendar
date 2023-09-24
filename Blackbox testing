@@ -1,1 +1,87 @@
 Login
+Certainly, if clicking on "Forgot Password" redirects to the contact page in your project, here's a revised black box testing plan for that specific scenario:
+
+**Login Page Testing with "Forgot Password" Redirect:**
+
+1. **Valid Login Test:**
+   - Input: Correct username and password.
+   - Test: Verify that the user is redirected to the homepage.
+   - Expected Output: The user should land on the homepage successfully.
+
+2. **Invalid Login Test:**
+   - Input: Incorrect username or password.
+   - Test: Verify that the user sees an error message indicating that the credentials are incorrect.
+   - Expected Output: The user should see an error message, and not be redirected to the homepage.
+
+3. **Forgot Password Test:**
+   - Input: Click on the "Forgot Password" link.
+   - Test: Check if clicking the link redirects the user to the contact page.
+   - Expected Output: The contact page should be displayed.
+
+4. **Contact Page Test:**
+   - Input: After clicking on "Forgot Password," ensure that the user is on the contact page.
+   - Test: Verify that the contact page is displayed.
+   - Expected Output: The contact page should be visible.
+
+5. **Contact Page Navigation Test:**
+   - Input: After landing on the contact page, test the navigation back to the login page or other pages (if applicable).
+   - Test: Ensure that the navigation links or buttons work as expected.
+   - Expected Output: The user should be able to navigate back to the login page or other relevant pages.
+
+6. **Invalid Credentials Recovery Test:**
+   - Input: After seeing an error for incorrect credentials, enter correct credentials.
+   - Test: Verify that the user is redirected to the homepage.
+   - Expected Output: The user should successfully access the homepage after providing correct credentials.
+
+7. **Logout Test:**
+   - Input: After successfully logging in, click on the "Logout" button.
+   - Test: Ensure that the user is logged out and redirected to the login page.
+   - Expected Output: The user should be on the login page after logging out.
+
+This testing plan specifically focuses on the behavior of the login page, the "Forgot Password" link, and the redirection to the contact page as described in your project. It also includes tests for navigation between pages based on user interactions.
+
+Thank you for clarifying the behavior of the header on the home page. Based on this information, here's an updated black box testing plan that considers the default display of "Employee List," "Dashboard," and "Team Calendar" on the home page and the functionality of the "Team Calendar" button:
+
+**Home Page Testing:**
+
+1. **Default Components Test:**
+   - Input: Accessing the home page.
+   - Test: Ensure that the "Employee List," "Dashboard," and "Team Calendar" components are displayed by default.
+   - Expected Output: The home page should display these components without requiring user interaction.
+
+2. **Employee Click Test:**
+   - Input: Click on an employee in the list.
+   - Test: Verify that clicking on an employee's name displays their individual calendar and details on the dashboard.
+   - Expected Output: Employee-specific data, including the calendar and dashboard, should be visible.
+
+3. **Employee Calendar Test:**
+   - Input: Accessing an individual employee's calendar.
+   - Test: Ensure that the calendar displays the employee's events.
+   - Expected Output: The employee's calendar with events should be shown.
+
+4. **Team Calendar Test:**
+   - Input: Click on the "Team Calendar" button within an individual employee's view.
+   - Test: Verify that the user is redirected to the team calendar while remaining on the home page.
+   - Expected Output: The team calendar should replace the individual employee's calendar without navigating to a new page.
+
+5. **Team Calendar Navigation Test:**
+   - Input: While on the team calendar within the home page, test navigation back to the individual employee's view.
+   - Test: Ensure that the navigation links or buttons work as expected.
+   - Expected Output: The user should be able to navigate back to individual employee views.
+
+6. **Dashboard Data Test:**
+   - Input: Clicking on an employee and viewing their dashboard.
+   - Test: Verify that the dashboard displays relevant data, such as employee details.
+   - Expected Output: Employee-specific data should be correctly displayed on the dashboard.
+
+7. **Logout Test:**
+   - Input: After accessing various parts of the home page, click on the "Logout" button.
+   - Test: Ensure that the user is logged out and redirected to the login page.
+   - Expected Output: The user should be on the login page after logging out.
+
+8. **Performance Test:**
+   - Input: Interacting with various components on the home page.
+   - Test: Assess the application's performance, especially when dealing with a large number of events or employees.
+   - Expected Output: The application should remain responsive and not significantly slow down.
+
+This testing plan accounts for the default display of components on the home page and the functionality of the "Team Calendar" button for navigating within the home page while maintaining a consistent user experience.
