@@ -1,0 +1,70 @@
+[24/09, 5:56 pm] Akshara Kireeta: Test Case Document: Insights Page
+Test Case 1: Header Navigation
+Objective: To verify that the header navigation buttons work correctly.
+
+Test Scenario: Click on the "Home" button.
+
+Expected Outcome: The user is directed to the home page.
+Test Scenario: Click on the "Contact Info" button.
+
+Expected Outcome: The user is directed to the contact information page.
+Test Scenario: Click on the "Insights" button.
+
+Expected Outcome: The user remains on the Insights page.
+Test Scenario: Click on the "Logout" button.
+
+Expected Outcome: The user is logged out and redirected to the login page.
+
+Test Case 2: Employee List
+Objective: To verify the accuracy of the employee list and leave count.
+
+Test Scenario: Check if the employee list displays all employees.
+
+Expected Outcome: All employees are listed.
+Test Scenario: Check if leave counts for each employee are displayed correctly.
+
+Expected Outcome: Leave counts are accurate for each employee.
+
+Test Case 3: Sick Leave Hours Pie Chart
+Objective: To ensure the sick leave hours pie chart functions as expected.
+
+Test Scenario: Hover over a section of the pie chart.
+
+Expected Outcome: A tooltip displays the employee's name and their sick leave hours.
+Test Scenario: Click on a section of the pie chart.
+
+Expected Outcome: Detailed information about the selected employee's sick leave hours is displayed.
+
+Test Case 4: Total Leave Hours Pie Chart
+Objective: To ensure the total leave hours pie chart functions correctly.
+
+Test Scenario: Hover over a section of the pie chart.
+
+Expected Outcome: A tooltip displays the employee's name and their total leave hours.
+Test Scenario: Click on a section of the pie chart.
+
+Expected Outcome: Detailed information about the selected employee's total leave hours is displayed.
+
+Test Case 5: Casual Leave Hours Pie Chart
+Objective: To ensure the casual leave hours pie chart functions as expected.
+
+Test Scenario: Hover over a section of the pie chart.
+
+Expected Outcome: A tooltip displays the employee's name and their casual leave hours.
+Test Scenario: Click on a section of the pie chart.
+
+Expected Outcome: Detailed information about the selected employee's casual leave hours is displayed.
+Test Case 6: Legend for Pie Charts
+Objective: To verify that the legend correctly associates colors with employees in the pie charts.
+
+Test Scenario: Check if the legend displays the names of employees and their associated colors.
+
+Expected Outcome: Employee names and colors are correctly displayed in the legend.
+Test Scenario: Click on a legend entry.
+
+Expected Outcome: The corresponding section of the pie chart is highlighted or selected.
+[24/09, 5:57 pm] Akshara Kireeta: Test Case 7: Color Differentiation
+Objective: To ensure that each employee is represented by a different color in all pie charts.
+
+Test Scenario: Inspect the colors used in the pie charts.
+Expected Outcome: Each employee's slice in the pie chart has a unique color.
