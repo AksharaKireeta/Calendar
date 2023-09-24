@@ -1,4 +1,4 @@
-Login
+7Login
 Certainly, if clicking on "Forgot Password" redirects to the contact page in your project, here's a revised black box testing plan for that specific scenario:
 
 **Login Page Testing with "Forgot Password" Redirect:**
@@ -85,6 +85,69 @@ Thank you for clarifying the behavior of the header on the home page. Based on t
    - Expected Output: The application should remain responsive and not significantly slow down.
 
 This testing plan accounts for the default display of components on the home page and the functionality of the "Team Calendar" button for navigating within the home page while maintaining a consistent user experience.
+
+Thank you for providing additional details about the header and its functionality on the home page. Based on this information, here's an updated black box testing plan that considers the header buttons and their respective functionalities:
+
+**Home Page Header Testing:**
+
+1. **Home Button Test:**
+   - Input: Click on the "Home" button in the header.
+   - Test: Verify that clicking the "Home" button displays the default view of the home page.
+   - Expected Output: The default view of the home page should be displayed.
+
+2. **Contact Help Button Test:**
+   - Input: Click on the "Contact Help" button in the header.
+   - Test: Check if clicking the button redirects the user to the "Contact Help" page.
+   - Expected Output: The "Contact Help" page should be displayed.
+
+3. **Insights Button Test:**
+   - Input: Click on the "Insights" button in the header.
+   - Test: Verify that clicking the button redirects the user to the "Insights" page.
+   - Expected Output: The "Insights" page displaying employee leave count and pie charts for leave hours should be visible.
+
+4. **Logout Button Test:**
+   - Input: Click on the "Logout" button in the header.
+   - Test: Ensure that the user is logged out and redirected to the login page.
+   - Expected Output: The user should be on the login page after logging out.
+
+**Home Page Content Testing:**
+
+5. **Default Components Test:**
+   - Input: Accessing the home page.
+   - Test: Ensure that the "Employee List," "Dashboard," and "Team Calendar" components are displayed by default.
+   - Expected Output: The home page should display these components without requiring user interaction.
+
+6. **Employee Click Test:**
+   - Input: Click on an employee in the list.
+   - Test: Verify that clicking on an employee's name displays their individual calendar and details on the dashboard.
+   - Expected Output: Employee-specific data, including the calendar and dashboard, should be visible.
+
+7. **Employee Calendar Test:**
+   - Input: Accessing an individual employee's calendar.
+   - Test: Ensure that the calendar displays the employee's events.
+   - Expected Output: The employee's calendar with events should be shown.
+
+8. **Team Calendar Test:**
+   - Input: Click on the "Team Calendar" button within an individual employee's view.
+   - Test: Verify that the user is redirected to the team calendar while remaining on the home page.
+   - Expected Output: The team calendar should replace the individual employee's calendar without navigating to a new page.
+
+9. **Team Calendar Navigation Test:**
+   - Input: While on the team calendar within the home page, test navigation back to the individual employee's view.
+   - Test: Ensure that the navigation links or buttons work as expected.
+   - Expected Output: The user should be able to navigate back to individual employee views.
+
+10. **Dashboard Data Test:**
+    - Input: Clicking on an employee and viewing their dashboard.
+    - Test: Verify that the dashboard displays relevant data, such as employee details.
+    - Expected Output: Employee-specific data should be correctly displayed on the dashboard.
+
+11. **Performance Test:**
+    - Input: Interacting with various components on the home page.
+    - Test: Assess the application's performance, especially when dealing with a large number of events or employees.
+    - Expected Output: The application should remain responsive and not significantly slow down.
+
+This testing plan accounts for the functionality of the header buttons, navigation between different pages, and the behavior of components on the home page to ensure a smooth user experience.
 
 Thank you for providing additional details about the header and its functionality on the home page. Based on this information, here's an updated black box testing plan that considers the header buttons and their respective functionalities:
 
