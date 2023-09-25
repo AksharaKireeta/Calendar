@@ -1,0 +1,78 @@
+Slide 1: Title Slide
+
+Title: "Empower: Your Team's Weekly Insights"
+Subtitle: "Enhancing Team Engagement and Well-being"
+Company Logo
+Slide 2: Agenda (Presenter 1 - 1 minute)
+
+Outline of the presentation sections.
+Slide 3: Introduction (Presenter 1 - 2 minutes)
+
+Why team management and well-being are crucial.
+The role of the application in addressing these challenges.
+High-level overview of the application components.
+
+Slide 4: Architecture Overview (Presenter 1 - 1.5 minutes)
+
+Introduction to the application's architecture.
+Mention the choice of a monolithic architecture.
+Explain why it suits the application's needs.
+Slide 5: Front End (Presenter 2 - 2 minutes)
+
+Components and features in the front end.
+Highlight the use of React and Material UI.
+Discuss the advantages of this technology stack.
+
+Slide 6: Back End (Presenter 3 - 2 minutes)
+
+Describe the back-end components and functionality.
+Mention the use of Spring Boot.
+Explain how it supports the application's data processing.
+
+Slide 7: Integration (Presenter 4 - 1.5 minutes)
+
+Discuss how front-end and back-end components are integrated.
+Explain the communication protocols and APIs used.
+Emphasize the seamless user experience.
+Slide 8: Tools Used (Presenter 1 - 1.5 minutes)
+
+List the tools used in development.
+Explain how Figma was used for wireframe design.
+Mention the efficiency gained from these tools.
+
+Slide 9: Assumptions & Limitations (Presenter 2 - 1.5 minutes)
+
+Present any assumptions made during development.
+Discuss limitations or constraints of the application.
+Address how these were mitigated.
+Slide 10: Database (Presenter 3 - 2 minutes)
+
+Describe the database setup.
+Mention the use of Oracle SQL Developer.
+Highlight the importance of data management.
+Slide 11: Data Flow (Presenter 4 - 1.5 minutes)
+
+Provide an overview of how data flows through the application.
+Explain the significance of efficient data handling.
+Discuss any security measures in place.
+
+Slide 12: User Experience (Presenter 1 - 2 minutes)
+
+Present empathy maps to illustrate user personas.
+Show user flow state diagrams to depict interaction scenarios.
+Emphasize the user-centric design approach.
+Slide 13: Insights (Presenter 2 - 2 minutes)
+
+Explain how data from marketplace APIs is utilized.
+Showcase sample insights generated.
+Discuss the direct impact on team management.
+Slide 14: Q&A and Conclusion (All Presenters - 2 minutes)
+
+Engage with the audience for questions.
+Recap the key points.
+Reiterate the application's value.
+Slide 15: Thank You (All Presenters - 0.5 minutes)
+
+Express gratitude.
+Provide contact details for further inquiries.
+Each presenter should be prepared to delve into the specifics of their section, using visuals, diagrams, and examples to make the information clear and engaging for the audience.
