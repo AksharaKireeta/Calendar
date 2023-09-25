@@ -1,3 +1,14 @@
+Objective 1: Seamlessly integrate our calendar app with ADP's HCM system via the marketplace platform.
+Objective 2: Empower organizations to effortlessly access and visualize employee work schedules and leave events.
+Objective 3: Provide managers with actionable insights into employee well-being and engagement through schedule and leave data.
+Objective 4: Retrieve essential data from the System of Record (SOR) using marketplace APIs and display it within our calendar app.
+
+
+
+
+
+
+
 The objective of this project is to build a calendar app integrated with ADPs HCM system via the marketplace platform.
 Organizations using ADP’s HCM system will be able to use this calendar app to view employee’s work schedule and leave event details.
 Also, the app will provide valuable insights to managers on employee’s well being and engagement based on their schedule and leave data.
