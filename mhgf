@@ -1,3 +1,101 @@
+Streamlined Leave Approval: Managers can efficiently approve leave requests with a clear view of total leave hours. This reduces administrative overhead.
+Optimized Workforce: By understanding total leave hours, managers can better plan for peak workloads and ensure a balanced workforce.
+Employee Satisfaction: Employees appreciate a well-managed leave process, contributing to higher job satisfaction and retention.
+
+
+
+
+
+
+Sick Leave Hours Pie Chart:
+
+Data-Driven Decision-Making: Managers gain the ability to make data-driven decisions regarding sick leave patterns. They can identify employees who may require additional support or accommodations.
+Proactive Management: This insight empowers managers to take a proactive approach to employee well-being by addressing health issues early on.
+Enhanced Engagement: A healthier workforce leads to higher employee engagement and productivity.
+
+Leave Count for Each Employee:
+
+Empowering Managers: This insight provides managers with a clear snapshot of their team's leave balances. It empowers them to make data-driven decisions regarding scheduling and leave approvals.
+Efficient Workforce Management: Managers can efficiently allocate resources and identify potential scheduling conflicts, ensuring a smoothly operating team.
+Enhanced Well-being: By optimizing schedules and leave management, employees experience a better work-life balance, contributing to their overall well-being and job satisfaction.
+
+Notification Card (Sick Leave Frequency & No Leaves)
+
+Overview:
+
+The Notification Card proactively informs managers about employee leave behaviors.
+Key Functions:
+
+Detects and notifies when an employee takes frequent sick leaves.
+Sends reminders for employees who haven't taken any leaves.
+Benefits:
+
+Early identification of potential health issues or excessive sick leave.
+Ensures that employees take necessary breaks and time off.
+Supports employee well-being and engagement.
+
+
+
+Casual Leave Hours Pie Chart
+
+Overview:
+
+Highlights casual leave hours taken by employees.
+Key Functions:
+
+Provides insights into casual leave patterns among team members.
+Benefits:
+
+Efficient management of casual leave allocation.
+Identification of potential trends in casual leave usage.
+Helps ensure a balanced workforce schedule.
+
+
+Total Leave Hours Pie Chart
+
+Overview:
+
+Presents the total leave hours for each employee, combining various leave types.
+Key Functions:
+
+Offers an at-a-glance view of an employee's overall leave hours.
+Benefits:
+
+Simplifies the assessment of an employee's total time off.
+Streamlines leave approval processes.
+Supports accurate workforce planning.
+
+
+Sick Leave Hours Pie Chart
+
+Overview:
+
+A visual representation of sick leave hours taken by each employee.
+Key Functions:
+
+Allows hovering over sections for employee name and sick leave hours.
+Clicking on a section provides detailed information about the selected employee's sick leave hours.
+Benefits:
+
+Instant visibility into employees' sick leave patterns.
+Efficient identification of employees in need of support.
+Data-driven decisions regarding sick leave management.
+
+
+Leave Count for Each Employee
+
+Overview:
+This feature provides a comprehensive list of employees along with their respective leave counts.
+Key Functions:
+Displays employee names and their leave balances, categorized by leave types (e.g., vacation, sick leave, casual leave).
+Benefits:
+Quick assessment of team availability.
+Easy identification of potential scheduling conflicts.
+Informed decision-making regarding leave approvals and workforce management.
+
+
+
+
 Objective 1: Seamlessly integrate our calendar app with ADP's HCM system via the marketplace platform.
 Objective 2: Empower organizations to effortlessly access and visualize employee work schedules and leave events.
 Objective 3: Provide managers with actionable insights into employee well-being and engagement through schedule and leave data.
