@@ -1,0 +1,17 @@
+In the user setup within the "Manage Users" section, the input field for the Work Phone number was initially restricted to Canadian phone numbers. However, based on client feedback and the evolving needs of our users, we have expanded the scope to allow entry of international phone numbers.
+The decision to include international numbers stems from the recognition that our users may operate on a global scale, and the Work Phone number serves a crucial role in billing verification. This number is utilized for billing-related inquiries, where support staff cross-verify the provided information with the Net Secure database. This verification process ensures the legitimacy of the caller, particularly when addressing billing concerns. Enabling the entry of international numbers enhances the flexibility and inclusivity of our system, aligning with the diverse geographical locations of our user base.
+
+Connector Changes:
+In the connector, for each phone in the ADP team, if it is not undefined and not null, the phone.phoneNumber will be set equal to phoneNumber concatenated with the extension.
+
+Reducer Changes:
+For the initial state in the reducer:
+
+The default country is set to Canada.
+The length of rowone.phonenumber must be less than or equal to 20 characters, including spaces.
+In the case of adding contacts phone number text, if it's for an ADP user, the phone number is set based on the provided value. For a client user, the country is stored, and the phone number is set to the formatted phone number.
+Load Users Data:
+While displaying, the phone number is displayed by adding phoneNumber plus extension.
+During editing, based on whether it's an ADP user or a client user, different transformations are applied to the phone number and extension.
+Code Explanation:
+The code ensures proper handling of phone numbers and extensions for both ADP and client users. It sets the initial state, processes the phone number input, and handles the display and editing of phone numbers in a consistent manner. The logic considers scenarios for ADP and client users, including phone number formatting and extension handling.
