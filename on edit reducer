@@ -1,0 +1,222 @@
+case manageUsersActionsTypes.ON_EDIT: {
+      const newState = { ...state };
+      newState.isContactChangeStatus = false;
+      newState.isPhoneNumberChanged = false;
+      newState.isClientEdit = true;
+      newState.userAlreadyPresent = false;
+      newState.isSuccessMsgVisible = false;
+      newState.dataSavingInNetsecure = false;
+      newState.showContentSelector = true;
+      const editUser: IManageUsers = Object.assign({}, action.params.item);
+      newState.emailSaved = editUser.email;
+      newState.languagePreference = editUser.languagePreference;
+      if (editUser.workPhoneNumber !== FormatHelper.formatMessage('@@NOT_PROVIDED')) {
+        newState.phoneNumberSaved = editUser.workPhoneNumber;
+      }
+      else if (editUser.workMobilePhoneNumber !== FormatHelper.formatMessage('@@NOT_PROVIDED')) {
+        newState.phoneNumberSaved = editUser.workMobilePhoneNumber;
+      }
+      else {
+        newState.phoneNumberSaved = editUser.personalMobilePhoneNumber;
+      }
+      newState.firstNameSaved = editUser.firstName;
+      newState.lastNameSaved = editUser.lastName;
+      newState.middleNameSaved = editUser.middleName;
+      const securityMetadata: ISecurity = action.securityMetadata;
+      const settingsContant = Settings.manageUsers;
+      if (action.params.item.userRole !== '') {
+        newState.radioButtonYesNoValue = Settings.manageUsers.YES;
+        newState.yes = false;
+        newState.no = true;
+        newState.showForClientYesRadio = true;
+      }
+      else {
+        newState.yes = true;
+        newState.no = false;
+        newState.showForClientYesRadio = false;
+      }
+      editUser.userRequestType = { id: 5, userRequestType: 'EDIT_USER', value: 'EDIT USER' };
+      newState.contactDetails = Object.assign({}, editUser);
+      const contactTypes = editUser.contactType.split(', ');
+      const contactsToDisplay = [];
+      contactTypes.forEach((contactPresent) => {
+
+        const contactTypeItem = securityMetadata.userContactTypeList.filter((contact) => contact.value === contactPresent);
+        contactsToDisplay.push({ label: contactTypeItem[0].value, value: contactTypeItem[0].id });
+      });
+      newState.contacts = contactsToDisplay;
+      newState.selectedClientRole = editUser.userRole;
+      let emptyPhoneIndex = editUser.phoneNumbers.findIndex((phone) => phone.phoneNumberTypeId === 0);
+      if (-1 !== emptyPhoneIndex) {
+        editUser.phoneNumbers.splice(emptyPhoneIndex, 1);
+      }
+      let phoneNumberCount = 0;
+      editUser.phoneNumbers.forEach((phone) => {
+        const phoneNumItem = securityMetadata.phoneNumberTypeList.filter((phoneNum) => phoneNum.id === phone.phoneNumberTypeId);
+        phone.phoneNumberType = phoneNumItem[0].phoneNumberType;
+        phone.value = phoneNumItem[0].value;
+
+        if (phone.phoneNumber !== null && phone.phoneNumber !== '' && phone.phoneNumber !== undefined) {
+          if (1 === phone.phoneNumberTypeId) {
+            phone.phoneNumber = editUser.workPhoneNumber.trim();
+            if (editUser.extension === null) {
+              if (phone.phoneNumber[0] === '+') {
+                phone.phoneNumberValue = phone.phoneNumber;
+              }
+              else {
+                const extNum: string = phone.phoneNumber.substring(10, phone.phoneNumber.length);
+                if (extNum.length === 0) {
+                  phone.phoneNumber = phone.phoneNumber.substring(0, phone.phoneNumber.length);
+                  phone.phoneNumberValue = '+1 ' + phone.phoneNumber.substring(0, phone.phoneNumber.length);
+                }
+                else {
+                  phone.phoneNumber = phone.phoneNumber.substring(0, 10);
+                  phone.phoneNumberValue = '+1 ' + phone.phoneNumber.substring(0, 10);
+                }
+                phone.ext = extNum;
+                phone.isExtVisible = true;
+              }
+            }
+            else {
+              phone.ext = editUser.extension;
+              phone.phoneNumberValue = phone.phoneNumber.substring(0, phone.phoneNumber.length - phone.ext.length);
+              phone.isExtVisible = true;
+            }
+          }
+          else {
+            phone.phoneNumber = phone.phoneNumber.trim();
+            phone.isExtVisible = false;
+            phone.isAddVisible = false;
+            phone.phoneNumberLength = 10;
+            phone.phoneNumberValue = '+1 ' + phone.phoneNumber;
+          }
+          if (editUser.phoneNumbers.findIndex((p) => p.id === phone.id) === editUser.phoneNumbers.length - 1) {
+            phone.isAddVisible = true;
+          }
+          else {
+            phone.isAddVisible = false;
+          }
+
+          if (0 === phoneNumberCount) {
+            newState.phoneNumberRowOne = { ...phone };
+            newState.phoneNumberRowOne.phoneNumberTypeList = Object.assign([], newState.phoneNumberTypeList);
+            const isAdmin = SessionManager.getUser().userType.value === FrameworkConstants.USER_TYPE.ADP_USER ? true : false;
+            if (isAdmin) {
+              newState.phoneNumberRowOne.phoneNumberTypeList = newState.activeManageUserTab === '0' || newState.selectedUserTabValue === FrameworkConstants.USER_TYPE.ADP_TEAM ? newState.phoneNumberRowOne.phoneNumberTypeList.filter((x) => x !== settingsContant.PERSONAL_MOBILE && x !== settingsContant.WORK_MOBILE) : newState.phoneNumberRowOne.phoneNumberTypeList;
+            }
+          }
+          else if (1 === phoneNumberCount) {
+            newState.isPhoneNumberRowTwo = true;
+            newState.phoneNumberRowTwo = { ...phone };
+            newState.phoneNumberRowTwo.phoneNumberTypeList = Object.assign([], newState.phoneNumberTypeList);
+
+            emptyPhoneIndex = newState.phoneNumberRowTwo.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowOne.value);
+            if (-1 !== emptyPhoneIndex) {
+              newState.phoneNumberRowTwo.phoneNumberTypeList.splice(emptyPhoneIndex, 1);
+            }
+
+            emptyPhoneIndex = newState.phoneNumberRowOne.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowTwo.value);
+            if (-1 !== emptyPhoneIndex) {
+              newState.phoneNumberRowOne.phoneNumberTypeList.splice(emptyPhoneIndex, 1);
+            }
+          }
+          else if (2 === phoneNumberCount) {
+            newState.isPhoneNumberRowThree = true;
+            newState.phoneNumberRowThird = { ...phone };
+            newState.phoneNumberRowThird.isAddVisible = false;
+            newState.phoneNumberRowThird.phoneNumberTypeList = Object.assign([], newState.phoneNumberTypeList);
+
+            emptyPhoneIndex = newState.phoneNumberRowThird.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowOne.value);
+            if (-1 !== emptyPhoneIndex) {
+              newState.phoneNumberRowThird.phoneNumberTypeList.splice(emptyPhoneIndex, 1);
+            }
+            emptyPhoneIndex = newState.phoneNumberRowThird.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowOne.value);
+            if (-1 !== emptyPhoneIndex) {
+              newState.phoneNumberRowThird.phoneNumberTypeList.splice(emptyPhoneIndex, 1);
+            }
+            emptyPhoneIndex = newState.phoneNumberRowOne.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowThird.value);
+            if (-1 !== emptyPhoneIndex) {
+              newState.phoneNumberRowOne.phoneNumberTypeList.splice(emptyPhoneIndex, 1);
+            }
+            emptyPhoneIndex = newState.phoneNumberRowTwo.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowThird.value);
+            if (-1 !== emptyPhoneIndex) {
+              newState.phoneNumberRowTwo.phoneNumberTypeList.splice(emptyPhoneIndex, 1);
+            }
+          }
+          phoneNumberCount = phoneNumberCount + 1;
+        }
+        else {
+          if (newState.adpContactRadioValue === FormatHelper.formatMessage('@@adp_Team')) {
+            newState.phoneNumberRowOne.value = phoneNumItem[0].value;
+          }
+        }
+      });
+
+      editUser.jobTitle = FormatHelper.formatMessage('@@NOT_PROVIDED') === editUser.jobTitle ? '' : editUser.jobTitle;
+      editUser.email = FormatHelper.formatMessage('@@NOT_PROVIDED') === editUser.email ? '' : editUser.email;
+      newState.emailVaild = FormatHelper.formatMessage('@@NOT_PROVIDED') === editUser.email ? false : true;
+      editUser.userRole = FormatHelper.formatMessage('@@NOT_PROVIDED') === editUser.userRole ? '' : editUser.userRole;
+      newState.showForEdit = true;
+      newState.isContactTypeEdit = false;
+      newState.showContactInfoSlideIn = true;
+      if (1 === editUser.userTypeId) {
+        newState.adpContactRadioValue = FormatHelper.formatMessage('@@adp_Team');
+        newState.ADPTeam = true;
+        newState.ClientTeam = false;
+
+        newState.contactsDropDown = [];
+        const adpContacts = Object.assign([], newState.AdpContactTypeList);
+        if (editUser.contactTypeIdList.length === newState.AdpContactTypeList.length) {
+          newState.dropDowncontactTypeVal = FormatHelper.formatMessage('@@NOT_PROVIDED');
+        }
+        else {
+          editUser.contactTypeIdList.forEach((contactId) => {
+            const index = adpContacts.findIndex((adp) => adp.value === contactId);
+            if (-1 !== index) {
+              adpContacts.splice(index, 1);
+            }
+          });
+        }
+
+        adpContacts.forEach((adp) => {
+          newState.contactsDropDown.push(adp.label);
+        });
+        newState.dropDowncontactTypeVal = newState.contacts.label;
+
+      }
+      else {
+        newState.adpContactRadioValue = FormatHelper.formatMessage('@@client_Team');
+        newState.ADPTeam = false;
+        newState.ClientTeam = true;
+        newState.adpTeamContactsButton = true;
+        // newState.yourTeamContactsButton = false;
+
+        const clientContacts = Object.assign([], newState.ContactTypeList);
+        newState.contactsDropDown = [];
+        if (editUser.contactTypeIdList.length === newState.AdpContactTypeList.length) {
+          newState.dropDowncontactTypeVal = FormatHelper.formatMessage('@@NOT_PROVIDED');
+        }
+        else {
+          editUser.contactTypeIdList.forEach((contactId) => {
+            const index = clientContacts.findIndex((client) => client.value === contactId);
+            if (-1 !== index) {
+              clientContacts.splice(index, 1);
+            }
+          });
+        }
+
+        clientContacts.forEach((client) => {
+          newState.contactsDropDown.push(client.label);
+        });
+
+        newState.dropDowncontactTypeVal = newState.contacts.label;
+
+      }
+      if ((editUser.userId === 'NA' || editUser.userId === null) && editUser.userRole !== '' && editUser.userRole !== null) {
+        newState.isClientEdit = false;
+      }
+      newState.showADPClientCard = newState.adpContactRadioValue === 'ADP Team' || newState.adpContactRadioValue === 'Équipe ADP' ? 'ADP Team' : 'Client Team';
+      newState.contactDetails = Object.assign({}, editUser);
+      newState.sidePanelLabel = FormatHelper.formatMessage('@@edit_Contacts');
+      return newState;
+    }
