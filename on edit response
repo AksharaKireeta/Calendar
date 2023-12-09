@@ -1,0 +1,46 @@
+{
+  id: 0,
+  status: "IN_PROGRESS",
+  email: "akshara.kireeta.velpugonda@adp.com",
+  clientId: "SCMAE5",
+  …
+}aoid: nullclientId: "SCMAE5"clientOrgId: "G3KWHZAGC6ZDVZS3"companyCode: "BIO11"contactType: nullcontactTypeId: 0contactTypeIdList: [
+  5
+]contactTypeList: [
+  {
+    label: "Authorized Signing Officer",
+    value: 5
+  }
+]email: "akshara.kireeta.velpugonda@adp.com"exceptionIconClass: ""exceptionOccuredMsg: ""extension: "678"firstName: "Supriya"id: 0isVisibleToClient: falsejobTitle: "dev"languagePreference: "English"lastName: "Rathod"middleName: nullname: nullnotificationPreference: nullpersonalMobilePhoneNumber: nullphoneNumber: nullphoneNumberType: null
+phoneNumbers: [
+  {
+    id: 0,
+    phoneNumberTypeId: 1,
+    phoneNumberType: "WORK",
+    phoneNumber: "+44 7786 567654",
+    …
+  },
+  …
+]0: {
+  id: 0,
+  phoneNumberTypeId: 1,
+  phoneNumberType: "WORK",
+  phoneNumber: "+44 7786 567654",
+  …
+}1: {
+  id: 0,
+  phoneNumberTypeId: 2,
+  phoneNumberType: "HOME",
+  phoneNumber: "+1 250 789 6543",
+  …
+}2: {
+  id: 0,
+  phoneNumberTypeId: 3,
+  phoneNumberType: "MOBILE",
+  phoneNumber: "+1 418 678 6546",
+  …
+}reasonForFailure: ""showDataToClient: "No"showResetPasswordLink: trueshowRetryLink: falsesiebelIdentifier: nullstatus: "IN_PROGRESS"statusIconClass: ""statusNameClass: ""userId: nulluserRequestType: {
+  id: 3,
+  userRequestType: "ADD_USER",
+  value: "ADD USER"
+}userRole: "Security Master"userTypeId: 2userTypeValue: nullworkMobilePhoneNumber: nullworkPhoneNumber: null
