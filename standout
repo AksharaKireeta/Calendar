@@ -1,15 +1,16 @@
-Mdf Component issue Analysis
-code fix to display with the country code
-Meeting with Siva regarding country select issue
-Code fix for the Country select issue and test the changes
-Fix Client User edit issue and test the changes
-Adp User ext issue fix
-Fix Client User issues
-Save with Country code in the database
-Backend (save country code, area code and dial number separately)
-Displaying Phone numbers with only one space after country code in the table and resolve issues that occurred.
->Unable to save if added personal mobile or work mobile issue.
->unable to populate data to edit for personal mobile or work mobile issue.
->For ADP user edit, update and display with space after country code.
->For Client user after editing work mobile and personal mobile saving succesfully
-> For Client user after editing work phone number saving succesfully(after netsecure call)
+Conducted MDF Component issue analysis.
+Implemented code fix for displaying with the country code.
+Held a meeting with Siva to address the country select issue.
+Resolved Country select issue with code fix and conducted testing.
+Fixed Client User edit issue and tested the changes.
+Addressed ADP User extension issue.
+Resolved various Client User issues.
+Implemented save with Country code in the database.
+Worked on backend functionality to save country code, area code, and dial number separately.
+Adjusted the display of phone numbers in the table with only one space after the country code, resolving related issues
+Investigated and addressed issues:
+Unable to save if added personal mobile or work mobile.
+Unable to populate data for editing personal mobile or work mobile.
+Ensured ADP user edit, update, and display with space after the country code.
+Successfully saved edited work mobile and personal mobile for Client user.
+Ongoing work on saving edited work phone number for Client user after netsecure call.
