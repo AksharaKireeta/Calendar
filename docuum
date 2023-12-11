@@ -1,0 +1,59 @@
+Country select flag was changing on its own while we entering the phone number in the input. as we enter the first three digits i.e, Area code. 
+ For this Change we needed to change the field that we were returning and return the entire object which which contained the country as well. So, for this issue to not occur restructured the UI changes made. 
+> removed International= true property from the Json
+>removed the division for extension in adp team and used the same ext from the mdf phone component similar to the one used in Client team. So, that ext is updated for editing and limit code changes for the same.
+
+>Updated extension in "IManagerUsers" State.
+>In the connector: "SaveUser' –> userData.extension = manageUserState.phoneNumberrowOne.ext;
+>updated phone.phoneNumber = phone.phoneNUmberValue
+In the reducer , the save button was enabled for workphoneNumber since the length of the number was different for each country and there were spaces in the formatted phone which we were displaying. so, removed the validation of length of number should be 10 or 12 and kept only validation of not null since, all other validations were done by the component itself.
+> made the same change for both personal and work mobile as well since, the save button was not enabled.
+     In the case of ADD_CONTACTS_PHONE_NUMBER_TEXT: changes made so that extension is also saved and formatted phone is used for save and edit so that number consists of country code as well.
+      phoneNumber.phoneNumber = action.value.formattedPhone !== '' ? action.value.formattedPhone : action.value.phone;
+      phoneNumber.phoneNumberValue = action.value.formattedPhone !== '' ? action.value.formattedPhone : action.value.phone;
+      phoneNumber.ext = action.value.ext;
+On LOAD_USERS_DATA :
+> the extension was added to the phoneNumber which was assigned to workphonenumber. but for displaying with only one space after the country code and all other spaces to be removed. splitted the phonenumber into an array of numbers using the spaces and joined them according to the requirement.
+> Same with the personal and work mobile but without the extension.
+ON_EDIT: not able to edit for adp user and client user workphonenumber.
+>for this, previously phone.phoneNumber was updated with editUser.workPhoneNumber.trim(); → changed to only when phoneNumberTypeId==1 and
+
+
+if (editUser.extension === null) {
+              if (phone.phoneNumber[0] === '+') {
+                phone.phoneNumberValue = phone.phoneNumber;
+              }
+
+the above code change is made so that it checks whether the extension is null and if it is, it checks for + sign since, we were also giving country code for the new clients i.e,(formatted phone) who ever is adding and update phone.phoneNumberValue to phone.phoneNumber.
+Unable to populate data to edit for personal mobile or work mobile issue. 
+>if phoneNumberTypeId==2 and phoneNumberTypeId ==3 updated phone.phoneNumber with editUser.personalMobilePhoneNumber and editUser.workMobilePhoneNumber respectively.
+
+
+Unable to save workphoneNumber with the country code in the backend issue:  setting countrycode based on the space. 
+
+
+    private Phone setPhoneNumbers(UserClosedProjection userProj, Long phoneNumberTypeId) {
+        Phone phone = null;
+        Optional<PhoneNumberProjection> workPhoneNumber = userProj.getPhoneNumbers().stream()
+                .filter(ph -> ph.getPhoneNumberType().getId().compareTo(phoneNumberTypeId) == 0).findFirst();
+
+        if (workPhoneNumber.isPresent()) {
+            String countryCode = workPhoneNumber.get().getPhoneNumber().split(" ")[0];
+            phone = new Phone(countryCode, workPhoneNumber.get().getPhoneNumber().split(" ")[1],
+                    workPhoneNumber.get().getPhoneNumber().split(" ")[2]);
+        }
+        return phone;
+    }
+
+    private Phone setPhoneNumbers(UserEntity userProj, Long phoneNumberTypeId) {
+        Phone phone = null;
+        Optional<PhoneNumberEntity> workPhoneNumber = userProj.getPhoneNumbers().stream()
+                .filter(ph -> ph.getPhoneNumberType().getId().compareTo(phoneNumberTypeId) == 0).findFirst();
+
+        if (workPhoneNumber.isPresent()) {
+            String countryCode = workPhoneNumber.get().getPhoneNumber().split(" ")[0];
+            phone = new Phone(countryCode, workPhoneNumber.get().getPhoneNumber().split(" ")[1],
+                    workPhoneNumber.get().getPhoneNumber().split(" ")[2]);
+        }
+        return phone;
+    }
