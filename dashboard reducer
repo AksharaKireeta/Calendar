@@ -1,3 +1,5 @@
+::dashboardClientDetails.companyAddress.city${newState.dashboardClientDetails.companyAddress.provinceValue !== null ? ',' : ''}${newState.dashboardClientDetails.companyAddress.provinceValue !== null ? ' ' : ''}${newState.dashboardClientDetails.companyAddress.provinceValue || ''}
+
 `::dashboardClientDetails.companyAddress.city${newState.dashboardClientDetails.companyAddress.provinceValue !== null ? ',' : ''} ${newState.dashboardClientDetails.companyAddress.provinceValue || ''}`;
 
 newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
