@@ -1,53 +1,411 @@
-here in this json city is displayed at the left corner. it should be aligned with the city and postal code and all the details
-change this code
-
+this is the complete json for client details. in this,for client address all address line1,2, city,state,province and postalcode should be aligned like a column. give css change what i should do such that the province will align with all others.
 {
-                          "type": "div",
-                          "properties": {
-                            "className": "vdl-col-xs-4 coloumnPadding"
-                          },
-                          "content": [
-                            {
-                              "type": "span",
-                              "content": "@@ClientDtls_Address",
-                              "properties": {
-                                "className": "content_font"
-                              }
-                            },
-                            {
-                              "type": "div",
-                              "properties": {
-                                "className": "BoldText"
-                              },
-                              "content": "::dashboardClientDetails.companyAddress.addressLine1"
-                            },
-                            {
-                              "type": "div",
-                              "properties": {
-                                "className": "BoldText"
-                              },
-                              "content": "::dashboardClientDetails.companyAddress.addressLine2"
-                            },
-                            {
-                              "type": "div",
-                              "properties": {
-                                "className": "BoldText"
-                              },
-                              "content": "::dashboardClientDetails.companyAddress.city"
-                            },
-                            {
-                              "type": "div",
-                              "properties": {
-                                "className": "BoldText"
-                              },
-                              "content": "::dashboardClientDetails.companyAddress.provinceValue"
-                            },
-                            {
-                              "type": "div",
-                              "properties": {
-                                "className": "BoldText"
-                              },
-                              "content": "::dashboardClientDetails.companyAddress.postalCode"
-                            }
-                          ]
-                        },
+  "type": "div",
+  "properties": {
+    "className": "accountInfoContent"
+  },
+  "content": [
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ADPClientId"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.clientId"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap",
+        "render": false
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_erp_Client_ID"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.erpClientId"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap",
+        "render": "::isAdpUser"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Organization_Id"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.organizationId"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Client_Name"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.clientName"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Address"
+        },
+        {
+          "type": "div",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.companyAddress.addressLine1"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap",
+        "render": "::dashboardClientDetails.addressRendering"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          }
+        },
+        {
+          "type": "div",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.companyAddress.addressLine2"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap",
+        "render": "::dashboardClientDetails.addressRendering"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          }
+        },
+        {
+          "type": "div",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.companyAddress.city"
+        },
+        {
+          "type": "div",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.companyAddress.provinceValue"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap",
+        "render": "::dashboardClientDetails.addressRendering"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          }
+        },
+        {
+          "type": "div",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.companyAddress.postalCode"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Order_Type"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.orderType"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap",
+        "render": "::isAdpUser"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Market_Segment"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.marketSegment"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Payroll_System"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText textTransform_capitalize"
+          },
+          "content": "::dashboardClientDetails.payrollSystem"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Services"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.services"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_GoLiveDate"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.goLiveDate"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content"
+          },
+          "content": "@@ClientDtls_Default_Language"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.defaultLanguage"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "vdl-row accountInfoGap"
+      },
+      "content": [
+        {
+          "type": "MDFLabel",
+          "properties": {
+            "className": "vdl-col-lg-5 width_content",
+            "render": "::isAdpUser" 
+          },
+          "content": "@@ClientDtls_Classification"
+        },
+        {
+          "type": "Text",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText",
+            "render": "::isAdpUser"
+          },
+          "content": "::dashboardClientDetails.classification"
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "mdf-d-flex mdf-justify-content-center visible-row editPadding"
+      },
+      "content": [
+        {
+          "type": "MDFToolBar",
+          "properties": {
+            "render": "::isAdpUser",
+            "onClick": "::openEditClientId",
+            "buttonList": [
+              {
+                "label": "@@edit_client_profile_label",
+                "iconClass": "fa fa-pencil"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "div",
+      "properties": {
+        "className": "width_percent"
+      },
+      "content": [
+        {
+          "type": "MDFSlideIn",
+          "properties": {
+            "size": "sm",
+            "show": "::showEditClientId",
+            "backdrop": true,
+            "closeable": true,
+            "containerClassName": "ca-smart-compliance",
+            "className": "",
+            "title": "@@edit_client_details_slidein_header",
+            "snackBar": "#<editClientFooter"
+          },
+          "content": [
+            {
+              "type": "editClientView"
+            }
+          ],
+          "events": [
+            {
+              "from": "onHide",
+              "dispatch": "closeEditClientId"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
