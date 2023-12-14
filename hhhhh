@@ -1,3 +1,13 @@
+Give all files code changes.make the changes so that the below  implementation works. and in json in place of province-- if country is us ,
+ billingadrress.state should be rendered and if country is canada newState.dashboardClientDetails.companyAddress.provinceValue should be rendered 
+{
+          "type": "div",
+          "properties": {
+            "className": "vdl-col-lg-7 BoldText"
+          },
+          "content": "::dashboardClientDetails.companyAddress.city, ::dashboardClientDetails.companyAddress.provinceValue"
+        }
+
 if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.US_COUNTRY_BILLING)
 newState.billingToAddress.state 
 if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.CA_COUNTRY_BILLING)
