@@ -1,0 +1,8 @@
+if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.US_COUNTRY_BILLING)
+newState.billingToAddress.state 
+if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.CA_COUNTRY_BILLING)
+newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
+          ? ''
+          : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
+            ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
+            : '';
