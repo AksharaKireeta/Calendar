@@ -1,0 +1,115 @@
+in company address it is an array of 2 in which 0 index row is billing adress and 1 is shipping address
+in billing address country,country id and state are null  and province id is visible and country seperately is set to canada
+newState.dashboardClientDetails.country = onboardClientDetails.country-->417-->companyAddress[0].country
+and for company address, in the LOAD_DASHBOARD_CLIENT_DATA --> if country is US then province should not be taken condition needs to be written
+i.e, province id  need not be set when country is US
+in const parentCompanyAddresss
+case DashboardActionTypes.LOAD_DASHBOARD_CLIENT_DATA: {
+      // return { ...state, dashboardClientDetails: action.value };
+      const newState = { ...state };
+      const onboardClientDetails = action.value.onboardClientDetails;
+      const constants = DashboardViews.notProvided;
+      const metadata: IMetadata = action.value.metadata;
+      newState.payrollSystemList = metadata.payrollSystemList;
+      newState.clientClassificationList = metadata.clientClassificationList;
+      newState.dropDownIntegrationValues = metadata.integrationTypes;
+      newState.editClientDetails.defaultLangaugeData = metadata.languageLocale;
+      // const clientDetails = Object.assign(dashboardClientDetails,dashboardClientDetails);
+      newState.dashboardClientDetails.id = !onboardClientDetails.clientProfileId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : onboardClientDetails.clientProfileId;
+      newState.dashboardClientDetails.clientId = !onboardClientDetails.clientId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : onboardClientDetails.clientId;
+      newState.dashboardClientDetails.erpClientId = !onboardClientDetails.erpClientId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : onboardClientDetails.erpClientId;
+      newState.dashboardClientDetails.clientName = !onboardClientDetails.clientName ? FormatHelper.formatMessage('@@NOT_PROVIDED') : onboardClientDetails.clientName;
+      newState.dashboardClientDetails.organizationId = !onboardClientDetails.organizationId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : onboardClientDetails.organizationId;
+      newState.dashboardClientDetails.goLiveDate = !onboardClientDetails.goLiveDate ? FormatHelper.formatMessage('@@NOT_PROVIDED') :
+        moment(onboardClientDetails.goLiveDate).format(FrameworkConstants.canadianDateFormat.DATE);
+
+      newState.dashboardClientDetails.ERPId = !onboardClientDetails.erpId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : onboardClientDetails.erpId;
+      // newState.dashboardClientDetails.addressLine1 = !onboardClientDetails.addressLine1 ? constants.NOT_PROVIDED : onboardClientDetails.addressLine1;
+      // newState.dashboardClientDetails.addressLine2 = !onboardClientDetails.addressLine2 ? constants.NOT_PROVIDED : onboardClientDetails.addressLine2;
+      // newState.dashboardClientDetails.city = !onboardClientDetails.city ? constants.NOT_PROVIDED : onboardClientDetails.city;
+      // newState.dashboardClientDetails.postalCode = !onboardClientDetails.postalCode ? constants.NOT_PROVIDED : onboardClientDetails.postalCode;
+      newState.dashboardClientDetails.country = onboardClientDetails.country;
+      newState.dashboardClientDetails.farmId = !onboardClientDetails.farmId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : onboardClientDetails.farmId;
+      newState.dashboardClientDetails.defaultLanguage = getDefaultLanguage(onboardClientDetails.defaultLanguage);
+      newState.dashboardClientDetails.region = onboardClientDetails.region;
+      newState.dashboardClientDetails.passcode = onboardClientDetails.passcode;
+
+      if (!newState.dashboardClientDetails.passcode) {
+        newState.dashboardClientDetails.passcode = FormatHelper.formatMessage('@@NOT_PROVIDED');
+      }
+
+      newState.dashboardClientDetails.classificationId = onboardClientDetails.clientClassificationId;
+      if (metadata && metadata.clientClassificationList && metadata.clientClassificationList.length > 0 && newState.dashboardClientDetails.classificationId !== 0) {
+        newState.dashboardClientDetails.classification = metadata.clientClassificationList.find((x) => x.id === onboardClientDetails.clientClassificationId) ? metadata.clientClassificationList.find((x) => x.id === onboardClientDetails.clientClassificationId).value : '';
+      }
+      else {
+        newState.dashboardClientDetails.classification = FormatHelper.formatMessage('@@NOT_PROVIDED');
+      }
+
+      newState.dashboardClientDetails.provinceId = onboardClientDetails.provinceId;
+      if (metadata && metadata.provinceList && metadata.provinceList.length > 0) {
+        newState.dashboardClientDetails.province = metadata.provinceList.find((x) => x.provinceId === onboardClientDetails.provinceId) ? metadata.provinceList.find((x) => x.provinceId === onboardClientDetails.provinceId).provinceName : '';
+      }
+      else {
+        newState.dashboardClientDetails.province = '';
+      }
+
+      newState.dashboardClientDetails.orderTypeId = onboardClientDetails.orderTypeId;
+      if (metadata && metadata.orderTypeList && metadata.orderTypeList.length > 0) {
+        newState.dashboardClientDetails.orderType = metadata.orderTypeList.find((x) => x.id === onboardClientDetails.orderTypeId) ? metadata.orderTypeList.find((x) => x.id === onboardClientDetails.orderTypeId).value : '';
+      }
+      else {
+        newState.dashboardClientDetails.orderType = '';
+      }
+
+      newState.dashboardClientDetails.marketSegmentId = onboardClientDetails.marketSegmentId;
+      if (metadata && metadata.marketSegmentList && metadata.marketSegmentList.length > 0) {
+        newState.dashboardClientDetails.marketSegment = metadata.marketSegmentList.find((x) => x.id === onboardClientDetails.marketSegmentId) ? metadata.marketSegmentList.find((x) => x.id === onboardClientDetails.marketSegmentId).value : '';
+      }
+      else {
+        newState.dashboardClientDetails.marketSegment = '';
+      }
+
+      newState.dashboardClientDetails.projectStatusId = onboardClientDetails.projectStatusId;
+      if (metadata && metadata.clientProjectStatusList && metadata.clientProjectStatusList.length > 0) {
+        newState.dashboardClientDetails.projectStatusValue = metadata.clientProjectStatusList.find((x) => x.id === onboardClientDetails.projectStatusId) ? metadata.clientProjectStatusList.find((x) => x.id === onboardClientDetails.projectStatusId).value : '';
+      }
+      else {
+        newState.dashboardClientDetails.projectStatusValue = '';
+      }
+      const user: ISessionUser = { ...SessionManager.getUser() };
+      const parentCompanyCode = user.companyId;
+      if (action.value.onboardClientDetails.companyAddress.length > 0) {
+        const parentCompanyAddresss = action.value.onboardClientDetails.companyAddress.filter((address) => address.companyId === parentCompanyCode);
+        newState.dashboardClientDetails.companyAddress = parentCompanyAddresss.find((x) => x.addressType === Onboarding.addressType.BILL_TO_ADDRESS) ? parentCompanyAddresss.find((x) => x.addressType === Onboarding.addressType.BILL_TO_ADDRESS) : newState.dashboardClientDetails.companyAddress;
+        newState.dashboardClientDetails.companyAddress.addressLine1 = (!newState.dashboardClientDetails.companyAddress.addressLine1 || newState.dashboardClientDetails.companyAddress.addressLine1 === constants.NOT_PROVIDED) ? FormatHelper.formatMessage('@@NOT_PROVIDED') : newState.dashboardClientDetails.companyAddress.addressLine1;
+        newState.dashboardClientDetails.companyAddress.addressLine2 = !newState.dashboardClientDetails.companyAddress.addressLine2 ? null : newState.dashboardClientDetails.companyAddress.addressLine2;
+        newState.dashboardClientDetails.companyAddress.city = !newState.dashboardClientDetails.companyAddress.city ? FormatHelper.formatMessage('@@NOT_PROVIDED') : newState.dashboardClientDetails.companyAddress.city;
+        newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName;
+        newState.dashboardClientDetails.companyAddress.postalCode = !newState.dashboardClientDetails.companyAddress.postalCode ? FormatHelper.formatMessage('@@NOT_PROVIDED') : newState.dashboardClientDetails.companyAddress.postalCode;
+        if ((newState.dashboardClientDetails.companyAddress.addressLine1 === FormatHelper.formatMessage('@@NOT_PROVIDED') || newState.dashboardClientDetails.companyAddress.addressLine1 === constants.NOT_PROVIDED) && (newState.dashboardClientDetails.companyAddress.provinceValue === FormatHelper.formatMessage('@@NOT_PROVIDED') || newState.dashboardClientDetails.companyAddress.provinceValue === constants.NOT_PROVIDED)) {
+          newState.dashboardClientDetails.addressRendering = false;
+        }
+      }
+      const clientStatus = metadata.clientStatusList.find((element) => element.id === onboardClientDetails.status);
+      if (clientStatus !== undefined) {
+        newState.showDashboardMessage = true;
+        if (clientStatus.key === Onboarding.companyStatus.IN_PROGRESS) {
+          // newState.dashboardAlertMsg = FormatHelper.formatMessage('@@duringOnboardStage');
+          newState.showOnboardingStatusChart = true;
+        }
+        else if (clientStatus.key === Onboarding.companyStatus.COMPLETED) {
+          newState.showOnboardingStatusChart = true;
+          // newState.showPaymentProcessingTab = true;
+          // newState.dashboardAlertMsg = FormatHelper.formatMessage('@@postOnboardPreProcessing');
+        }
+      }
+      const isAdmin = SessionManager.getUser().userType.value === FrameworkConstants.USER_TYPE.ADP_USER ? true : false;
+      if (isAdmin) {
+        newState.dashboardAccountDetailsHeader = FormatHelper.formatMessage('@@dashboardClientDetails');
+      }
+      else if (!isAdmin) {
+        newState.dashboardAccountDetailsHeader = FormatHelper.formatMessage('@@dashboardAccountDetails');
+      }
+      return newState;
+    }
