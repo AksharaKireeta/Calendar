@@ -1,0 +1,53 @@
+here in this json city is displayed at the left corner. it should be aligned with the city and postal code and all the details
+change this code
+
+{
+                          "type": "div",
+                          "properties": {
+                            "className": "vdl-col-xs-4 coloumnPadding"
+                          },
+                          "content": [
+                            {
+                              "type": "span",
+                              "content": "@@ClientDtls_Address",
+                              "properties": {
+                                "className": "content_font"
+                              }
+                            },
+                            {
+                              "type": "div",
+                              "properties": {
+                                "className": "BoldText"
+                              },
+                              "content": "::dashboardClientDetails.companyAddress.addressLine1"
+                            },
+                            {
+                              "type": "div",
+                              "properties": {
+                                "className": "BoldText"
+                              },
+                              "content": "::dashboardClientDetails.companyAddress.addressLine2"
+                            },
+                            {
+                              "type": "div",
+                              "properties": {
+                                "className": "BoldText"
+                              },
+                              "content": "::dashboardClientDetails.companyAddress.city"
+                            },
+                            {
+                              "type": "div",
+                              "properties": {
+                                "className": "BoldText"
+                              },
+                              "content": "::dashboardClientDetails.companyAddress.provinceValue"
+                            },
+                            {
+                              "type": "div",
+                              "properties": {
+                                "className": "BoldText"
+                              },
+                              "content": "::dashboardClientDetails.companyAddress.postalCode"
+                            }
+                          ]
+                        },
