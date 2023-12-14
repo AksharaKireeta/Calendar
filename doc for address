@@ -1,35 +1,27 @@
-Problem to solve:
+Problem to Solve:
 
-In home page, the client address is displayed incorrectly.
+On the home page, the client's address is displayed incorrectly, particularly when dealing with addresses in the USA. The issue arises when displaying the province, as it is shown even when it is not provided, leading to inaccurate information.
+Analysis and Code Fix:
 
+During the loading of the home page, the LOAD_DASHBOARD_CLIENT_DATA action triggers the reducer. Here, the new state for the province value is updated to newState.dashboardClientDetails.companyAddress.provinceId).provinceName.
 
-
-Analysis and code fix:
-> Here, since we are displaying the entire address it includes the province. So, for USA even if there is no province it is still displaying province of the shipping address or not provided.
-
->In the reducer, LOAD_DASHBOARD_CLIENT_DATA is called when the home page is loading. In this case, the new state of the province value is updated to newState.dashboardClientDetails.companyAddress.provinceId).provinceName.
-
-> fix  that is given is for country USA, the province will be null so, whenever the province is null display nothing and if province is not null it will display province.
-
+To address the problem, a fix is implemented to check if the country is the USA. If the country is the USA and the province is null, display nothing. If the province is not null, display the province name.
 newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
-          ? ''
-          : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
-            ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
-            : '';
-
-
-
->And also, if country is US, state should be displayed and if country is canada province should be displayed. so, to implement that -->
+  ? ''
+  : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
+    ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
+    : '';
+Additionally, for displaying the state or province based on the country, the following logic is added:
+If the billing address country is the USA, display the state.
+If the billing address country is Canada, display the province.
 
 if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.US_COUNTRY_BILLING)
-newState.billingToAddress.state 
+  newState.billingToAddress.state;
+
 if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.CA_COUNTRY_BILLING)
-newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
-          ? ''
-          : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
-            ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
-            : '';
-
-
-
-and adding a new property addressContent. so that this variable can be used in clientDetails json to display.
+  newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
+    ? ''
+    : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
+      ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
+      : '';
+A new property addressContent is introduced to the state so that this variable can be utilized in the clientDetails JSON for display purposes.
