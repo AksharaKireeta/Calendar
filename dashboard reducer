@@ -1,3 +1,12 @@
+newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
+  ? ''
+  : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
+    ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
+    : '';
+
+
+
+
 if newState.dashboardClientDetails.companyAddress.provinceValue is '@@NOT_PROVIDED' then display as space. it should not display it as not provided. in json content is this content": "::dashboardClientDetails.companyAddress.city, ::dashboardClientDetails.companyAddress.provinceValue . so if dashboardClientDetails.companyAddress.provinceValue is not provided i.e null then, the content should be only
 ::dashboardClientDetails.companyAddress.city
 below is in reducer
