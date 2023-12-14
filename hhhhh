@@ -1,3 +1,34 @@
+{
+  "type": "div",
+  "properties": {
+    "className": "vdl-col-lg-7 BoldText"
+  },
+  "content": "::dashboardClientDetails.companyAddress.city, ::addressContent"
+}
+
+// Inside the reducer logic, where newState is being constructed
+if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.US_COUNTRY_BILLING) {
+  newState.dashboardClientDetails.companyAddress.provinceValue = newState.billingToAddress.state || '';
+} else if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.CA_COUNTRY_BILLING) {
+  newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
+    ? ''
+    : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
+      ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
+      : '';
+}
+
+// Add a new property for the address content
+newState.addressContent = `${newState.dashboardClientDetails.companyAddress.city}, ${newState.dashboardClientDetails.companyAddress.provinceValue}`;
+
+
+
+
+
+
+
+
+
+
 Give all files code changes.make the changes so that the below  implementation works. and in json in place of province-- if country is us ,
  billingadrress.state should be rendered and if country is canada newState.dashboardClientDetails.companyAddress.provinceValue should be rendered 
 {
