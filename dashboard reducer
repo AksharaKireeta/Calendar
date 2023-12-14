@@ -1,3 +1,9 @@
+if newState.dashboardClientDetails.companyAddress.provinceValue is '@@NOT_PROVIDED' then display as space. it should not display it as not provided. in json content is this content": "::dashboardClientDetails.companyAddress.city, ::dashboardClientDetails.companyAddress.provinceValue . so if dashboardClientDetails.companyAddress.provinceValue is not provided i.e null then, the content should be only
+::dashboardClientDetails.companyAddress.city
+below is in reducer
+newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId ? FormatHelper.formatMessage('@@NOT_PROVIDED') : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName;
+change code according to the given requirement. give where all i need to make the changes
+
 in company address it is an array of 2 in which 0 index row is billing adress and 1 is shipping address
 in billing address country,country id and state are null  and province id is visible and country seperately is set to canada
 newState.dashboardClientDetails.country = onboardClientDetails.country-->417-->companyAddress[0].country
