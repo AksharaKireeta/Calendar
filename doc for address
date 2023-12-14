@@ -1,0 +1,35 @@
+Problem to solve:
+
+In home page, the client address is displayed incorrectly.
+
+
+
+Analysis and code fix:
+> Here, since we are displaying the entire address it includes the province. So, for USA even if there is no province it is still displaying province of the shipping address or not provided.
+
+>In the reducer, LOAD_DASHBOARD_CLIENT_DATA is called when the home page is loading. In this case, the new state of the province value is updated to newState.dashboardClientDetails.companyAddress.provinceId).provinceName.
+
+> fix  that is given is for country USA, the province will be null so, whenever the province is null display nothing and if province is not null it will display province.
+
+newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
+          ? ''
+          : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
+            ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
+            : '';
+
+
+
+>And also, if country is US, state should be displayed and if country is canada province should be displayed. so, to implement that -->
+
+if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.US_COUNTRY_BILLING)
+newState.billingToAddress.state 
+if (newState.billingToAddress.countryId === Onboarding.countryDropdownListconstants_Id.CA_COUNTRY_BILLING)
+newState.dashboardClientDetails.companyAddress.provinceValue = !newState.dashboardClientDetails.companyAddress.provinceId
+          ? ''
+          : metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId)
+            ? metadata.provinceList.find((province) => province.provinceId === newState.dashboardClientDetails.companyAddress.provinceId).provinceName
+            : '';
+
+
+
+and adding a new property addressContent. so that this variable can be used in clientDetails json to display.
