@@ -1,0 +1,7 @@
+This week I have worked on international phone number issue gave the fix  For Client user after editing work phone number saving succesfully(after netsecure call) .
+Also gave code fix to enable save button only after usersetup radio button is not null.
+Unit tested these changes and reviewed the code changes
+Also learnt how to set up jdk version, Fly-way debugging while working on the dit build fail.
+Tested in Dit for Adp team as well as Client team.
+worked on Client address on Home page feeding incorrectly issue.
+gave the code fix to set state and province in company address (UI) and code fix to set state and province in company address (backend).
