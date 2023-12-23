@@ -1,3 +1,15 @@
+Addressed international phone number issue for the client, providing a successful fix for users after editing work phone numbers (post-netsecure call).
+Implemented a code fix to enable the save button only when the usersetup radio button is not null.
+Conducted unit testing on the implemented changes and performed a thorough code review.
+Acquired knowledge on setting up JDK version and utilized Flyway debugging to resolve issues during the Dit build process.
+Tested and validated changes in the Dit environment for both ADP team and Client team.
+Investigated and resolved the issue of Client address on the Home page being fed incorrectly.
+Provided code fixes for setting the state and province in the company address UI and backend to ensure accuracy.
+
+
+
+
+
 This week I have worked on international phone number issue gave the fix  For Client user after editing work phone number saving succesfully(after netsecure call) .
 Also gave code fix to enable save button only after usersetup radio button is not null.
 Unit tested these changes and reviewed the code changes
