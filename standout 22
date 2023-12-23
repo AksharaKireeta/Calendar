@@ -5,6 +5,10 @@ Acquired knowledge on setting up JDK version and utilized Flyway debugging to re
 Tested and validated changes in the Dit environment for both ADP team and Client team.
 Investigated and resolved the issue of Client address on the Home page being fed incorrectly.
 Provided code fixes for setting the state and province in the company address UI and backend to ensure accuracy.
+Thoroughly conducted unit testing and meticulously reviewed both documentation and code.
+Successfully completed DIT testing by executing QA scenarios to ensure robustness.
+Addressed a specific issue where fetching dashboard details failed for the "baa1" company in DIT, resolving the "No companies found exception."
+Identified and implemented changes to prevent similar errors for other scenarios, enhancing system stability and reliability.
 
 
 
