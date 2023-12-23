@@ -9,7 +9,8 @@ Provided code fixes for setting the state and province in the company address UI
 
 
 
-
+unit tested , reviewed the documentation and  code. Completed DIT testing - executing QA scenarios.
+fetching dashboard details were failing for baa1 company in dit (No companies found exception). So, fixed this. also identified and made changes for those who might cause a similar error as well.
 This week I have worked on international phone number issue gave the fix  For Client user after editing work phone number saving succesfully(after netsecure call) .
 Also gave code fix to enable save button only after usersetup radio button is not null.
 Unit tested these changes and reviewed the code changes
