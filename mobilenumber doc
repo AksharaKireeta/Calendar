@@ -1,3 +1,28 @@
+Problem Statement:
+
+In the "Manage Users" section, during the initial creation of a user account, the work mobile number from the client user needs to be set up in SMS. Currently, there is an issue with updating the mobile number in NetSecure.
+
+Significance of Saving Work Mobile Number:
+
+For two-factor authentication, since the work phone number cannot receive an SMS, it is imperative that the client can receive SMS notifications on the provided mobile number.
+Previous Implementation:
+
+In the user interface, user setup is only allowed if a work phone number is entered. Otherwise, a warning is triggered, stating "Work Phone number is required for the User setup."
+
+In the backend, only the work phone number (considered as a landline number) is saved in NetSecure.
+
+Request payload to NetSecure API:
+
+Modification needed:
+
+Include the work mobile number in the mobiles section of the payload to enable NetSecure to save it for verification purposes.
+
+Example modification:
+This adjustment allows the client to utilize the work mobile number for verification purposes
+
+
+
+
 edit the below for documenation, elaborate explain formally.
 Problem to solve:
 
