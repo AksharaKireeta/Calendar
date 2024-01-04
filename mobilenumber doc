@@ -1,3 +1,11 @@
+Significance of Saving Work Mobile Number:
+
+The urgency stems from the necessity of using the work mobile number for two-factor authentication. Given that the work phone number cannot receive SMS, it becomes crucial for the client to receive authentication messages on the provided mobile number.
+User Interface Constraint: The user interface mandates the entry of a work phone number for user setup. Failure to provide this results in a warning message stating, "Work Phone number is required for the User setup."
+
+Backend Storage: In the backend, only the work phone number, considered as a landline number, is stored in NetSecure. The request payload to NetSecure API exemplifies this by including an empty "mobiles" array.
+Modification Needed: The solution involves adjusting the payload to incorporate the work mobile number in the "mobiles" section. This modification allows NetSecure to save and utilize the work mobile number for verification purposes.
+
 Problem Statement:
 
 In the "Manage Users" section, during the initial creation of a user account, the work mobile number from the client user needs to be set up in SMS. Currently, there is an issue with updating the mobile number in NetSecure.
