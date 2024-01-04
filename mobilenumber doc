@@ -1,0 +1,125 @@
+edit the below for documenation, elaborate explain formally.
+Problem to solve:
+
+In the user setup within the "Manage Users" section, we need work mobile number from client user to be setup in SMS during the initial creation of the account. Currently, we are unable to update mobile number in  NetSecure.
+
+Why Work mobile Number needs to be saved ?
+
+
+For two-factor authentication, since, work phone number cannot get an sms, the client should be able to get sms to the mobile number provided. 
+
+Previously:
+
+In the UI, user setup is done only if work phone number is entered, otherwise it will throw an warning stating "Work Phone number is required for the User setup."
+
+In the backend,
+
+we are saving only work phone number in the netSecure i.e, Landline number. 
+
+below is the request payload format sent to netsecure api in which mobiles is empty. And in landlines, work phone number is sent.
+
+"businessCommunication": {
+                "landlines": [
+                  {
+                    "countryDialing": "",
+                    "areaDialing": "",
+                    "dialNumber": ""
+                  }
+                ],
+                "mobiles": [
+                  
+                ],
+                "emails": [
+                  {
+                    "emailUri": ""
+                  }
+                ]
+              }
+
+Backend flow in the Manage Users:
+
+
+
+
+Requirement Clarification: 
+
+Need to get format and other details from netSecure team (Tulasi)
+
+Solution:
+
+The url for client creation in netsecure is : https://netsecurefit.api.ws.nj.adp.com/scim/rest/api/events/core/v1/user.provision
+
+request payload is in the below format: 
+
+requestpayload: {
+  "events": [
+    {
+      "serviceCategoryCode": {
+        "codeValue": "core"
+      },
+      "eventNameCode": {
+        "codeValue": "user.provision"
+      },
+      "originator": {
+        "associateOID": "G0NKJDR3D4ZYK9GB"
+      },
+      "actor": {
+        "associateOID": "G0NKJDR3D4ZYK9GB"
+      },
+      "data": {
+        "eventContext": {
+          "organizationID": {
+            "idValue": "SCNOH3",
+            "schemeCode": {
+              "codeValue": "clientID"
+            }
+          }
+        },
+        "transform": {
+          "user": {
+            "userAccount": {
+              "accountTypeCode": {
+                "codeValue": "classic"
+              }
+            },
+            "associate": {
+              "legalName": {
+                "givenName": "Anand",
+                "familyName1": "Sinha"
+              },
+              "businessCommunication": {
+                "landlines": [
+                  {
+                    "countryDialing": "+1",
+                    "areaDialing": "250",
+                    "dialNumber": "836-5378784"
+                  }
+                ],
+                "mobiles": [
+                  
+                ],
+                "emails": [
+                  {
+                    "emailUri": "anand.sinha@adp.com"
+                  }
+                ]
+              }
+            }
+          },
+          "associateAuthorization": {
+            "memberOfAccessGroups": [
+              {
+                "groupID": "CLIENT Security Master"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
+
+So, In the mobiles, work mobile number which is being saved from the ui can be given and netsecure should be able to save that. providing the client to utilize the numbe rfor verification purposes.
+
+
+
