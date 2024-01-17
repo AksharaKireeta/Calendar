@@ -1,0 +1,54 @@
+case manageUsersActionsTypes.ADD_CONTACTS_PLUS_BUTTON: {
+      const newState = { ...state };
+      console.log(action.value);
+      let index = -1;
+      const settingsContants = Settings.manageUsers;
+      const phoneNumber: IPhoneNumber = { ...emptyPhoneNumberItem };
+      // phoneNumber.phoneNumberTypeList = { ...newState.phoneNumberTypeList };
+      phoneNumber.phoneNumberTypeList = Object.assign([], newState.phoneNumberTypeList);
+      if (settingsContants.PHONE_ONE === action.params.key && '' !== newState.phoneNumberRowOne.value && (null !== newState.phoneNumberRowOne.phoneNumber || 0 !== newState.phoneNumberRowOne.phoneNumber.length)) {
+        newState.phoneNumberRowOne.isAddVisible = false;
+        phoneNumber.isExtVisible = false;
+        newState.phoneNumberRowTwo = phoneNumber;
+        index = phoneNumber.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowOne.value);
+        if (-1 !== index) {
+          phoneNumber.phoneNumberTypeList.splice(index, 1);
+        }
+        newState.phoneNumberRowOne.phoneNumberTypeList = Object.assign([], [newState.phoneNumberRowOne.value]);
+        newState.isPhoneNumberRowTwo = true;
+      }
+      if (settingsContants.PHONE_TWO === action.params.key && '' !== newState.phoneNumberRowTwo.value && (null === newState.phoneNumberRowThird || '' === newState.phoneNumberRowThird.value) && (null !== newState.phoneNumberRowOne.phoneNumber || 0 !== newState.phoneNumberRowOne.phoneNumber.length)) {
+        newState.phoneNumberRowTwo.isAddVisible = false;
+        phoneNumber.isExtVisible = false;
+        phoneNumber.isAddVisible = false;
+        index = phoneNumber.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowOne.value);
+        if (-1 !== index) {
+          phoneNumber.phoneNumberTypeList.splice(index, 1);
+        }
+        index = phoneNumber.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowTwo.value);
+        if (-1 !== index) {
+          phoneNumber.phoneNumberTypeList.splice(index, 1);
+        }
+        newState.phoneNumberRowTwo.phoneNumberTypeList = Object.assign([], [newState.phoneNumberRowTwo.value]);
+        newState.phoneNumberRowThird = phoneNumber;
+        newState.isPhoneNumberRowThree = true;
+      }
+      if (settingsContants.PHONE_THIRD === action.params.key && '' !== newState.phoneNumberRowThird.value && (null === newState.phoneNumberRowTwo || '' === newState.phoneNumberRowTwo.value) && (null !== newState.phoneNumberRowOne.phoneNumber || 0 !== newState.phoneNumberRowOne.phoneNumber.length)) {
+        newState.phoneNumberRowThird.isAddVisible = false;
+        phoneNumber.isExtVisible = false;
+        phoneNumber.isAddVisible = false;
+        index = phoneNumber.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowOne.value);
+        if (-1 !== index) {
+          phoneNumber.phoneNumberTypeList.splice(index, 1);
+        }
+        index = phoneNumber.phoneNumberTypeList.findIndex((p) => p === newState.phoneNumberRowThird.value);
+        if (-1 !== index) {
+          phoneNumber.phoneNumberTypeList.splice(index, 1);
+        }
+        newState.phoneNumberRowThird.phoneNumberTypeList = Object.assign([], [newState.phoneNumberRowThird.value]);
+        newState.phoneNumberRowTwo = phoneNumber;
+        newState.isPhoneNumberRowTwo = true;
+      }
+      newState.isSaveContactButtonDisabled = isFormValid(newState);
+      return newState;
+    }
