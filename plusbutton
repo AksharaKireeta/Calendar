@@ -1,0 +1,6 @@
+if (editUser.phoneNumbers.length !== 3 && (editUser.phoneNumbers.findIndex((p) => p.id === phone.id) === editUser.phoneNumbers.length - 1)) {
+            phone.isAddVisible = true;
+          }
+          else {
+            phone.isAddVisible = false;
+          }
