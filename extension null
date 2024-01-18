@@ -1,0 +1,14 @@
+for (int totalPhoneNumbers = 0; totalPhoneNumbers < userDto.getPhoneNumbers()
+								.size(); totalPhoneNumbers++) {
+							if (userDto.getPhoneNumbers().get(totalPhoneNumbers).getPhoneNumberTypeId() == 1L) {
+								workPhoneFrmApi = userDto.getPhoneNumbers().get(totalPhoneNumbers).getPhoneNumber();
+								userDto.getPhoneNumbers().get(totalPhoneNumbers).setPhoneNumber(userDto.getPhoneNumbers().get(totalPhoneNumbers).getPhoneNumber());
+								extensionFrmApi = userDto.getExtension();
+							}
+							if (userDto.getPhoneNumbers().get(totalPhoneNumbers).getPhoneNumberTypeId() == 3L) {
+								workMobileFrmApi = userDto.getPhoneNumbers().get(totalPhoneNumbers).getPhoneNumber();
+								userDto.getPhoneNumbers().get(totalPhoneNumbers).setPhoneNumber(userDto.getPhoneNumbers().get(totalPhoneNumbers).getPhoneNumber());
+							}
+						}
+						if ((!workPhoneFrmApi.equals("") && !workPhoneStored.equals(workPhoneFrmApi)) || (!workMobileFrmApi.equals("") && !workMobileStored.equals(workMobileFrmApi)) || (!extensionFrmApi.equals("") && !extensionStored.equals(extensionFrmApi)) || (workMobileFrmApi.equals("") && !workMobileStored.equals(""))) {
+							isPhoneNumberChanged = true;
