@@ -1,3 +1,48 @@
+Edit User Functionality:
+
+Worked on editing user profiles.
+Resolved code issues related to the formatting of work phone and mobile numbers.
+Verified and addressed concerns about phone number saving and updating in NetSecure.
+Retry Edit Workmobile:
+
+Implemented code changes to handle retry scenarios for editing work mobile.
+Dropdown and Visibility Fixes:
+
+Fixed dropdown issues after saving work phone and mobile.
+Resolved the problem where both work mobile and personal mobile were visible.
+Button Functionality:
+
+Improved functionality for adding and deleting contacts.
+Fixed issues related to deleting phone numbers in the UI.
+Database Updates:
+
+Addressed discrepancies in updating the database after deleting personal and work mobile numbers.
+Fixed the UI status 'In Progress' issue.
+Postman Validation:
+
+Validated saving and editing work phones with extensions using Postman.
+Collaboration and Discussions:
+
+Connected with NetSecure for a discussion on 500 internal server errors after editing and saving.
+Collaborated with WFN team regarding extension-related implementations and identified existing issues.
+Collaborated with WFN team regarding extension-related implementations and identified existing issues.
+Engaged with Tulasi and Rene to discuss and address extension-related problems.
+Code Refinement:
+
+Made code changes based on inputs from Tulasi and tested scenarios for saving and editing with extensions.
+Exception Handling:
+
+Discovered an exception in the user.provision API during testing.
+Devised a solution and listed out use cases, subsequently reviewing them with Pavan
+
+
+
+
+
+
+
+
+
 Give these standout points vise formally and elaborated neatly to fill standout for this week
 this week i started working on edit user ,> gave code fix for on edit request payload issue ,i.e, edit workphone then workmobile is unformatted and viceversa 
    > Checked phone numbers saving and updating in netsecure 
