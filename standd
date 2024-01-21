@@ -1,0 +1,17 @@
+Give these standout points vise formally and elaborated neatly to fill standout for this week
+this week i started working on edit user ,> gave code fix for on edit request payload issue ,i.e, edit workphone then workmobile is unformatted and viceversa 
+   > Checked phone numbers saving and updating in netsecure 
+ > madecode changes for Retry Edit workmobile
+   > gave Fix for dropdown after saving wp and wm both wm and personal mobile is visible issue 
+	> gave Fix add contact button and delete button functionality 
+> made changes to fix delete phonenumber functionality in ui 
+    > gave fix for deleted personalnumber db is not updated issue (without extension) 
+	> gave fix for deleted workmobile db is updated, netsecure is not updated hence, ui status Inprogress issue 
+>	Saving and editing work phone with extension check from postman 
+> connected with netsecure to discuss about after edit and save 500 internal server error from netsecure 
+>connected with WFN team to discuss their implementation with extension and came to know to about the existing issue for extension
+> Connected with Tulasi on the extension issue
+> Connected with Rene on the approach for extension issue
+> made Code changes based on the inputs by Tulasi 
+>Tested scenarios for save and edit with extension and found an exception in user.provision api 
+> I Came up with solution and listed out useCases and reviewed with Pavan
