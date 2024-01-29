@@ -1,3 +1,28 @@
+Enhancements to Banking Information Section:
+
+Implemented code changes to modify alert messages and update CSS in the banking information section for client users, enhancing the user interface.
+Slider-1 Save Button Fix:
+
+Resolved the issue where the save button was erroneously enabled in the Manage User interface after opening slider-1.
+Strategic Meeting with Rene:
+
+Conducted a meeting with Rene to discuss the prioritized item 6.3 in the defects list and addressed concerns regarding the storage of extensions in NetSecure.
+Collaboration with Tulasi and NetSecure Team:
+
+Engaged in discussions with Tulasi and NetSecure team members to explore and discuss APIs, fostering collaboration and understanding of the technical landscape.
+Extension Handling in NetSecure:
+
+Following confirmation from Rene, implemented code changes to prevent the addition or updating of extensions in NetSecure, aligning with project requirements.
+Thorough Testing:
+
+Completed rigorous testing for various scenarios, including Retry and Rollback cases without extensions, ensuring robust functionality.
+Successfully conducted unit testing for Save, Edit, Save Retry, Edit Retry, Rollback, and Delete case scenarios, ensuring the reliability of each component
+
+
+
+
+
+
 -> made code changes to change the alert message and change css for the same in the banking information section for client user.
 -> Fixed save button being enabled in the manage User after opening the slider-1
 -> had a meeting with Rene to discuss on 6.3 item in defects priority list as well as about the extension being saved in Netsecure.
