@@ -1,0 +1,13 @@
+-> made code changes to change the alert message and change css for the same in the banking information section for client user.
+-> Fixed save button being enabled in the manage User after opening the slider-1
+-> had a meeting with Rene to discuss on 6.3 item in defects priority list as well as about the extension being saved in Netsecure.
+-> Communicated with Tulasi and few NetSecure members to discuss about the apis 
+-> after taking the confirmation from Rene, made Code changes to not add or update extension in netsecure
+->completed Testing scenarios for Retry Scenarios without extension 
+-> made Code changes for Rollback Scenarios without extension (gave fix for Task not picking up)
+->completed Testing scenarios for Rollback Scenarios without extension
+-> completed Unit testing Save case scenarios
+-> completed Unit testing Edit case scenarios
+-> completed Unit testing Save retry case scenarios
+-> completed Unit testing Edit Retry case scenarios
+-> completed Unit testing Rollback and delete case scenarios 
