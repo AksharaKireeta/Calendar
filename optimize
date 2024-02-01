@@ -1,3 +1,43 @@
+if (isEdit) {
+  ['phoneNumberRowTwo', 'phoneNumberRowThird'].forEach(rowKey => {
+    const phoneRow = manageUsersState[rowKey];
+    if (phoneRow && !isEmptyAndNa(phoneRow.value)) {
+      const phoneItem = securityMetadata.phoneNumberTypeList.find(p => p.value === phoneRow.value);
+      if (phoneItem) {
+        phoneRow.phoneNumberType = phoneItem.phoneNumberType;
+        phoneRow.phoneNumberTypeId = phoneItem.id;
+        if (phoneRow.isPhoneNumber) {
+          userData.phoneNumbers.push(phoneRow);
+        }
+      }
+    }
+  });
+} else {
+  ['phoneNumberRowTwo', 'phoneNumberRowThird'].forEach(rowKey => {
+    const phoneRow = manageUsersState[rowKey];
+    if (phoneRow && !isEmptyAndNa(phoneRow.value)) {
+      const phoneItem = securityMetadata.phoneNumberTypeList.find(p => p.value === phoneRow.value);
+      if (phoneItem) {
+        phoneRow.phoneNumberType = phoneItem.phoneNumberType;
+        phoneRow.phoneNumberTypeId = phoneItem.id;
+        if (phoneRow.isPhoneNumber) {
+          userData.phoneNumbers.push(phoneRow);
+        }
+      }
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
 use 
 isEmptyAndNa(field: any): boolean {
     if (null === field || undefined === field || '' === field || 'NA' === field) {
