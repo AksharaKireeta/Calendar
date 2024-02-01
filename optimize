@@ -1,0 +1,50 @@
+use 
+isEmptyAndNa(field: any): boolean {
+    if (null === field || undefined === field || '' === field || 'NA' === field) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+like util.isEmptyNa(manageUsersState.phoneNumberRowTwo)..
+and optimize this below code
+
+if (isEdit) {
+      if (null !== manageUsersState.phoneNumberRowTwo && manageUsersState.phoneNumberRowTwo.phoneNumberTypeId !== undefined && manageUsersState.phoneNumberRowTwo.phoneNumberTypeId !== null && manageUsersState.phoneNumberRowTwo.value !== null && manageUsersState.phoneNumberRowTwo.value !== "") {
+        phoneItem = securityMetadata.phoneNumberTypeList.filter((p) => p.value === manageUsersState.phoneNumberRowTwo.value);
+          manageUsersState.phoneNumberRowTwo.phoneNumberType = phoneItem[0].phoneNumberType;
+          manageUsersState.phoneNumberRowTwo.phoneNumberTypeId = phoneItem[0].id;
+          if (manageUsersState.isPhoneNumberRowTwo) {
+            userData.phoneNumbers.push(manageUsersState.phoneNumberRowTwo);
+          }
+      }
+    }
+    else if (null !== manageUsersState.phoneNumberRowTwo) {
+      {
+        phoneItem = securityMetadata.phoneNumberTypeList.filter((p) => p.value === manageUsersState.phoneNumberRowTwo.value);
+        manageUsersState.phoneNumberRowTwo.phoneNumberType = phoneItem[0].phoneNumberType;
+        manageUsersState.phoneNumberRowTwo.phoneNumberTypeId = phoneItem[0].id;
+        if (manageUsersState.isPhoneNumberRowTwo) {
+          userData.phoneNumbers.push(manageUsersState.phoneNumberRowTwo);
+        }
+      }
+    }
+    if (isEdit) {
+      if (null !== manageUsersState.phoneNumberRowThird && manageUsersState.phoneNumberRowThird.phoneNumberTypeId !== undefined && manageUsersState.phoneNumberRowThird.phoneNumberTypeId !== null && manageUsersState.phoneNumberRowThird.value !== null && manageUsersState.phoneNumberRowThird.value !== "") {
+        phoneItem = securityMetadata.phoneNumberTypeList.filter((p) => p.value === manageUsersState.phoneNumberRowThird.value);
+        manageUsersState.phoneNumberRowThird.phoneNumberType = phoneItem[0].phoneNumberType;
+        manageUsersState.phoneNumberRowThird.phoneNumberTypeId = phoneItem[0].id;
+        if (manageUsersState.isPhoneNumberRowThree) {
+          userData.phoneNumbers.push(manageUsersState.phoneNumberRowThird);
+        }
+      }
+    }
+    else if (null !== manageUsersState.phoneNumberRowThird) {
+      phoneItem = securityMetadata.phoneNumberTypeList.filter((p) => p.value === manageUsersState.phoneNumberRowThird.value);
+      manageUsersState.phoneNumberRowThird.phoneNumberType = phoneItem[0].phoneNumberType;
+      manageUsersState.phoneNumberRowThird.phoneNumberTypeId = phoneItem[0].id;
+      if (manageUsersState.isPhoneNumberRowThree) {
+        userData.phoneNumbers.push(manageUsersState.phoneNumberRowThird);
+      }
+    }
