@@ -1,0 +1,19 @@
+give stand out points vise formally and elaborare neatly to fill standout for this week
+completed Add scenarios in dit testing
+meeting with Divyendra and team for briefing
+Drop down issues on edit for client user fix is given 
+save and edit-- invalid - fixed
+save unabled issue - fixed  
+Went through observations list given by Navya and team and had a discussion with Pavan
+Edit scenarios completed testing in dit
+Fix for add button visible after all three numbers are saved is given 
+Scenario-Delete the work mobile and click on + again, do not enter the phone number and click on Save. It should show error message saying this field is mandatory or some meaningful error or warning message as user is unable to click on save unless he deletes the + sign again (Analysis done and given the fix for it.
+Fix to be able to save even if empty on edit and not mandatory (workmobile and personal mobile) is given 
+Deleting Workmobile number on edit, netsecure is not updated issue identified, analysed and tested with postman 
+Both work phone number and extension are combinely showing on UI as single number, same way it is saved in Netsecure fix done 
+Fit testing for the fix done for add visible after 3 numbers saved given 
+Request for french translation for item in banking information alert completed 
+Plus button for rowone Fix completed 
+Onboarding defect items meeting briefed issues in Onboarding which i identified
+Meeting with Divyendra and team to replicate issues which are not replicated and brief them on the fixed items 
+Dropdown fix in client user is inprogress 
