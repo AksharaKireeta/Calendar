@@ -1,0 +1,8 @@
+const phoneNumber: IPhoneNumber = action.params.phoneItem;
+      phoneNumber.phoneNumber = action.value.formattedPhone !== '' ? action.value.formattedPhone : action.value.phone;
+      phoneNumber.phoneNumberValue = action.value.formattedPhone !== '' ? action.value.formattedPhone : action.value.phone;
+      phoneNumber.ext = action.value.ext;
+
+ Cannot set properties of null (setting 'phoneNumber') resolve this in 2nd line of the code it is failing
+
+
