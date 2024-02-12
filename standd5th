@@ -1,0 +1,28 @@
+Give pointsvise elaborately the below points formally to fill my standout for this week
+This week i worked on the following:
+>made code changes to give Dropdown fix in client user tab
+>had a Meeting with Rene to discuss the implementation for the ui changes
+> made code changes for ui changes for the phoneNumbers with default values
+> gave Fix in backend to send so that mobiles will be blank in request when deleted
+>Analyzed the documentation for notification preference api (new) provided by the netsecure
+>completed Unit testing ui changes with default values
+"Code changes to Resolve issues in ui after making the changes:
+> remove dropdown and place phonenumber component with different phone types
+>gave fix for on edit, on radio button change, data population incorrectly 
+>gave fix to be able to save even if empty which are not mandatory
+>gave fix for unable to save personal number with workphone and workmobile 
+>gave fix to disable the save button when workmobile and personal mobile is in valid "
+>gave Fix personal mobile not being saved on edit
+>Reviewed with Rene after making the ui changes 
+>sent item id to delete workmobile and tested with postman 
+>made Code changes to set mobile item id as in required format for Netsecure to delete workmobile
+">gave Fix for unable to add mobile number on edit when workphone is saved at first
+>gave Fix for unable to add personal mobile on edit when workphone is saved at first
+>made Code changes to Clear states of workmobileNumber and personalmobileNumber when they are deleted on edit
+>made Code changes to fix error when workmobile is deleted and clicked on personal mobile"
+completed Unit testing ui changes with default values after giving the fix for the issues
+>tested Save scenarios
+> tested Edit Scenarios
+>tested Save Retry scenarios
+>Monday i will be completing Edit Retry scenarios,
+Rollback and delete scenarios and Fit testing for the fixes given and take up new task.
