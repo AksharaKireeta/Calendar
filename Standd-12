@@ -1,0 +1,19 @@
+Give pointwise elaborately and formally to fill my standout for this week. for the below
+This week i have completed testing
+> Save Retry scenarios 
+> Edit Retry scenarios 
+> Rollback and delete scenarios 
+> Also completed Fit testing
+> Identified issue while testing and gave Code fix for on edit, added extension more than 3 digits, saved succesfully again open for edit, it is showing in invalid -2
+> Connected with Mahesh Bade and confirmed the APIs
+Raised tickets for IAT, PROD. and confirmed They added the scopes.
+> Checked through postman user preferences language apis token generation and confirmed they are working fine.
+> Got session from Pavan on ROE flow	
+> Took the changes from bhupesh and implemented in my laptop for the ROE french translations
+> got knowledge transfer session on ROE UI screens by Nijit 
+> Understanding  ROE and Checking Data loading for main screen
+> Analyzed on the reported issue by Navya(Save being enabled without workphone saved and usersetup-YES) 
+> Gave Code Fix and Tested in Local and Fit for issue on Saving
+> wprked on the Feedback given by Rene to add disclaimer saying "Used for 2-Factor Authentication" beside workmobile
+> Started Analysis on Production issue where Client user creation failed in Manage Users and tried to replicate in local env 
+next week iam going to continue working on the production issue and find the root cause and also work on the ROE french translations task 
