@@ -1,3 +1,46 @@
+Completed Testing Scenarios:
+
+Saved Retry scenarios
+Edited Retry scenarios
+Rollback and delete scenarios
+Fit Testing:
+
+Successfully completed Fit testing
+Bug Identification and Resolution:
+
+Identified an issue during testing where adding an extension more than 3 digits and saving successfully, and then reopening for edit showed an invalid value of -2.
+Provided a code fix to resolve this issue
+API Confirmation:
+
+Connected with Mahesh Bade and confirmed the APIs.
+Raised tickets for IAT, PROD, and confirmed the addition of scopes.
+Postman Testing:
+
+Checked user preferences language APIs and token generation in Postman and confirmed they are working fine.
+ROE Flow and Implementation:
+
+Received session from Pavan on ROE flow.
+Implemented changes from Bhupesh on my laptop for ROE French translations.
+Attended knowledge transfer session on ROE UI screens by Nijit.
+Data Loading and Analysis:
+
+Understood ROE and checked data loading for the main screen.
+Analyzed a reported issue by Navya (Save being enabled without work phone saved and usersetup-YES).
+Provided a code fix and tested it locally, confirmed it was fit for the issue on saving.
+Feedback Implementation:
+
+Worked on feedback given by Rene to add a disclaimer saying "Used for 2-Factor Authentication" beside WorkMobile.
+Upcoming Work:
+
+Next week, you plan to continue working on the production issue and find the root cause.
+
+
+
+
+
+
+
+
 Give pointwise elaborately and formally to fill my standout for this week. for the below
 This week i have completed testing
 > Save Retry scenarios 
