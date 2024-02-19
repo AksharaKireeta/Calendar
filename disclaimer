@@ -1,0 +1,60 @@
+update this code such that just beside the lavel text @@workmobile,, the fa fa-info-circle  handIcon and contactsInfoLabelContent should be displayed. in the same line and div as label text
+
+{
+            "type":"div",
+            "properties":{
+                "className": "vdl-row phoneNumberText dropdownLeftSpacing"
+            },
+            "content":[
+                {
+                    "type": "div",
+                    "properties": {
+                        "className": "vdl-col-md-5 phoneNumberText"
+                    },
+                    "content": {
+                        "type": "MDFValidatedPhone",
+                        "properties": {
+                            "name": "phoneNumber",
+                            "id": "phoneNumber_id",
+                            "placeholder": "@@enter_Phone_Number",
+                            "title": "phoneNumber_title",
+                            "labelText": "@@Work_Mobile",
+                            "phone": "::phoneNumberRowTwo.phoneNumberValue",
+                            "showCountrySelect": true,
+                            "isExt": false,
+                            "immediate": true,
+                            "value": "::phoneNumberRowTwo.value"
+                        },
+                        "events": [
+                            {
+                                "from": "onChange",
+                                "dispatch": "addContactsPhoneNumberText",
+                                "params": {
+                                    "key": "phoneTwo",
+                                    "phoneItem": "::phoneNumberRowTwo"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "div",
+                    "content": [
+                        {
+                            "type": "MDFIcon",
+                            "properties": {
+                                "className": "fa fa-info-circle  handIcon"
+                            }
+                        },
+                        {
+                            "type": "span",
+                            "properties": {
+                                "className": "contactsInfoLabelContent"
+                            },
+                            "content": "@@Two_Factor_Authentication"
+                        }
+                    ]
+                }
+
+            ]
+        }
