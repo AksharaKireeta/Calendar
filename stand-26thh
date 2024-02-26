@@ -1,0 +1,56 @@
+Give point wise, briefly and formally to fill my stand out for this week
+
+>took Feedback confirmation and made changes to Fix alignment issues for the label Used for 2-Factor Authentication- workmobile 
+>Uploaded keys and values in the IDS tool for French Translation﻿ (Backend and main screens) 
+>FIT testing after workmobile disclaimer changes 
+>Uploaded remaining keys and values in the IDS tool for French Translation﻿ (Tabs and Slidein) 
+>Issue replication in Local environment,Finding the rootcause and Provide a solution for the same 
+>Analyze the latest failure after editing and saving email without space amd Connect with Tulasi and verify the client user being created in the Netsecure -2
+
+> Fixes for the Roe Main screen and filters  :
+changes to give Null check for fields in sliders
+changes for Roe summary screen, Roe status help icon info not visible 
+changes In Data Extraction slide in Give colon after reason and set space for Identifiant de la transaction:
+changes to fix In settlement error slider source if not available nothing is visible
+changes to fix ROE Main Screen- Roe Tab - OnHold- Settlementerror SlideIn - In details,File Received in SmartCompliance at: is not visible 
+
+>>
+Verify the following and Identify remaining keys and values for ROE Main Screen in french language : -3
+>Labels
+>Roe Description
+>Status Card (No of Transactions in each Status)
+>ROE tab 
+>Void Transactions tab
+>Refresh button 
+>pagination"
+
+>>
+Verify the following and Identify remaining keys and values for Filters Roe Main Screen in french language : -2
+>Reference ID ,Status,Received Date, Transaction Id 
+>All statuses in dropdown
+>Able to Filter out based on each category
+>Apply Filter and Clear all Buttons
+>On Close
+
+>Updated the Identified Keys and Values in the Code and gave fix for filters not working in Roe main screen
+
+
+>>
+Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab in french language : 
+>Grid column headers(TransactionId,Ref Id,Workday Compcodes,Scheduler Startdate,Received date,Employee count, Status)
+>Help Info in ReceivedDate and Status
+> Statuses and Corresponding batchcolor
+>Data loading in the grid.
+
+>>
+Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab- Data Extraction slidein, Data Processed SlideIn in french language : -2
+> Settlement headers
+> ReferenceId and Source 
+> Headers and Data for Reason,Received At,Transaction ID,Products,ERP Companies and
+Details(Event Type,Process Start Time,Process End Time,Message)
+> Back button"
+
+>made changes for Error messages(backend)in sliders in french 
+>gave Fix for Completed status in french is in grey 
+
+Next week i need to complete Roe all screens and tabs for french translation and Take Values in french from IDS Tool, update the code and start testing
