@@ -5,18 +5,13 @@ if (null !== newState.selectedProduct.serviceDTOList) {
     const formattedFrenchDate = date.toLocaleDateString('fr-FR', options); // French date format
     newState.selectedProductPurchaseDate = `${formattedDate} / ${formattedFrenchDate}`;
 }
+below error is coming for the above code. 
+No overload matches this call.
+  Overload 1 of 3, '(locales?: LocalesArgument, options?: DateTimeFormatOptions): string', gave the following error.
+    Argument of type '{ year: string; month: string; day: string; }' is not assignable to parameter of type 'DateTimeFormatOptions'.
+      Types of property 'year' are incompatible.
+        Type 'string' is not assignable to type '"numeric" | "2-digit"'.
+  Overload 2 of 3, '(locales?: string | string[], options?: DateTimeFormatOptions): string', gave the following error.
+    Argument of type '{ year: string; month: string; day: string; }' is not assignable to parameter of type 'DateTimeFormatOptions'.ts(2769)
 
-
-
-
-
-
-
-if (null !== newState.selectedProduct.serviceDTOList) {
-        const date = new Date(newState.selectedProduct.serviceDTOList[0].targetStartValue);
-        newState.selectedProductPurchaseDate = date.getFullYear() + '-' + (((date.getMonth() + 1) < 10) ? ('0' + (date.getMonth() + 1)) : (date.getMonth() + 1)) + '-' + (((date.getDate()) < 10) ? ('0' + (date.getDate())) : (date.getDate()));
-
-      }
-
-
-here i am using new Date() from javascript to get the date. it is not supporting french dates. make the code changes so that it works for french dates as well as english dates i.e, in english months and also french months
+make the code changes and fix it
