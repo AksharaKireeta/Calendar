@@ -1,4 +1,18 @@
 if (null !== newState.selectedProduct.serviceDTOList) {
+    const date = new Date(newState.selectedProduct.serviceDTOList[0].targetStartValue);
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+    const formattedDate = date.toLocaleDateString('en-GB', options); // English date format
+    const formattedFrenchDate = date.toLocaleDateString('fr-FR', options); // French date format
+    newState.selectedProductPurchaseDate = `${formattedDate} / ${formattedFrenchDate}`;
+}
+
+
+
+
+
+
+
+if (null !== newState.selectedProduct.serviceDTOList) {
         const date = new Date(newState.selectedProduct.serviceDTOList[0].targetStartValue);
         newState.selectedProductPurchaseDate = date.getFullYear() + '-' + (((date.getMonth() + 1) < 10) ? ('0' + (date.getMonth() + 1)) : (date.getMonth() + 1)) + '-' + (((date.getDate()) < 10) ? ('0' + (date.getDate())) : (date.getDate()));
 
