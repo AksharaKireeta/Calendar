@@ -1,4 +1,21 @@
 if (null !== newState.selectedProduct.serviceDTOList) {
+    const targetStartValue = newState.selectedProduct.serviceDTOList[0].targetStartValue;
+    const date = (typeof targetStartValue === 'string') ? new Date(targetStartValue) : targetStartValue;
+    if (!isNaN(date.getTime())) {
+        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        const formattedDate = date.toLocaleDateString('en-GB', options); // English date format
+        const formattedFrenchDate = date.toLocaleDateString('fr-FR', options); // French date format
+        newState.selectedProductPurchaseDate = `${formattedDate} / ${formattedFrenchDate}`;
+    } else {
+        console.error('Invalid date format');
+    }
+}
+
+
+
+
+
+if (null !== newState.selectedProduct.serviceDTOList) {
     const date = new Date(newState.selectedProduct.serviceDTOList[0].targetStartValue);
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     const formattedDate = date.toLocaleDateString('en-GB', options); // English date format
