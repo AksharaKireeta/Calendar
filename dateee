@@ -1,0 +1,8 @@
+if (null !== newState.selectedProduct.serviceDTOList) {
+        const date = new Date(newState.selectedProduct.serviceDTOList[0].targetStartValue);
+        newState.selectedProductPurchaseDate = date.getFullYear() + '-' + (((date.getMonth() + 1) < 10) ? ('0' + (date.getMonth() + 1)) : (date.getMonth() + 1)) + '-' + (((date.getDate()) < 10) ? ('0' + (date.getDate())) : (date.getDate()));
+
+      }
+
+
+here i am using new Date() from javascript to get the date. it is not supporting french dates. make the code changes so that it works for french dates as well as english dates i.e, in english months and also french months
