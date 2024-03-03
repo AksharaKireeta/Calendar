@@ -1,3 +1,20 @@
+
+1. Updated code with French values from a tool.
+2. Verified and identified keys and values for various sections of ROE Main Screen in French.
+3. Made code changes and unit tested for Excel downloads with French headers.
+4. Conducted unit testing for download functionalities.
+5. Continued updating code with French values.
+6. Tested and identified remaining keys for French translation.
+7. Uploaded keys and values for French translation in IDS tool.
+8. Conducted code review and identified and fixed configuration issues.
+9. Identified and fixed issues related to onboarding and date picker.
+10. Tested fixes in local environment.
+11. Completed unit testing for various ROE UI screens.
+12. Fixed visibility issue for products in the demo.
+13. Planned to address feedback and complete unit testing for ROE translation error messages next week.
+
+
+
 give point vise briefly the below points to fill my standout for this week. 
 this week i worked on the following tasks:
 >Take Values in french from Tool and update the code 	
