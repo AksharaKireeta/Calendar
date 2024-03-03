@@ -1,0 +1,35 @@
+give point vise briefly the below points to fill my standout for this week. 
+this week i worked on the following tasks:
+>Take Values in french from Tool and update the code 	
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Void Transactions Tab in french language 
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Void Transactions Tab -Voided -Settlement SlideIn in french language
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Void Transactions Tab -Filters in french language
+>Code changes for Download Summary and Download Roe errors api for excel (for headers in French) and unit tested	
+>unit testing for the Dowmload Summary and Download Roe errors for excel download 	
+>Take Values in french from Tool and update the code 
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab - InProgress - Summary  in french language 
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab - InProgress - Summary Tab - Filters in french language 	
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab - OnHold- Settlementerror SlideIn in french language
+>Take Values in french from Tool and update the code	
+>Testing /Identify remaining keys and values for French Translation﻿ (ROE Summary screen - Summary tab -  additional details slider)
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab in french language 
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab-Error Tab in french language 	
+>Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab - Error (0 emplyee count) - Settlementerror SlideIn in french language 	
+Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab - Completed with Exceptions in french Translation:
+> Both summary Tab and Errors tab 
+Verify the following and Identify remaining keys and values for ROE Main Screen- Roe Tab - Completed in french Translation:
+> Only Summary Tab "	
+>Upload keys and values in the IDS tool for French Translation﻿	and Take Values in french from Tool and update the code 	
+Code Review for ROE UI translations (Pavan)		
+>Identified issue in Configurations - on edit slider - products selected drop down, even after purchasing ROE and saving in the drop down it is visible - Analysis and fix 	
+>Identified issue in Configurations - on edit slider - on selecting any service/ product it is not saved. - Analysis and fix	
+>Identified issue in Onboarding - even if target Date is not selected - we are able to purchase the service -Analysis and fix	
+>Identified issue in Onboarding - on edit not able to display Target Date Analysis (Date picker issue) 	
+>Test in local env for the fixes given in English	
+>Code Review for ROE UI translations, took feedback
+>Complete Unit Testing ROE UI screens-
+1.Roe main screen- Filters Roe Main Screen
+2.ROE Main Screen- Roe Tab
+3.ROE Main Screen- Roe Tab- Data Extraction slidein, Data Processed SlideIn
+4.ROE Main Screen- Roe Tab-Error Tab
+>In the demo, identified that products not visible in slider - fixed it and tested.
