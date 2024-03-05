@@ -1,0 +1,15 @@
+
+Select a date from next month and save
+
+And on edit check for the  display of the date for all the above testcases
+
+Select a date from allowed range and save 
+
+Select a month with special characters and save a date 
+
+Select an invalid date : expected -It should not allow to save 
+
+Check if the date changed is updated and displayed with the English language.
+
+Edit and save for all the services.(checking since same date picker is used for all.)
+
