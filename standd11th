@@ -1,0 +1,35 @@
+Give point wise to fill my standout for this week formally for the below
+
+This week i worked on the following tasks:
+>Connected with Rene to discuss error messages display in ROE sliders
+> Gave Code fix for Date picker issue in french 
+>Listing testcases for Datepicker
+>> completed Local testing for Date picker:
+>Able to save with different months (check with all 12)
+>Select a date from next month and save
+>Select a date from allowed range and save 
+>Select a month with special characters and save a date 
+>Select an invalid date : expected -It should not allow to save 
+>Check if the date changed is updated and displayed with the English language. 
+>And on edit check for the  display of the date for all the above testcases
+>Edit and save for all the services.(checking since same date picker is used for all.)"
+>>Made changes for Hrs in the slider as per feeback from Rene
+>>Made Code changes for statuses display in Additional details (Pending issuance status, Accepted status, Rejected status)
+>>"Completed Unit Testing ROE UI screens-
+ROE Main Screen- Roe Tab - Error (0 emplyee count) - Settlementerror SlideIn
+ROE Main Screen- Roe Tab - InProgress - Summary Tab
+ROE Main Screen- Roe Tab - InProgress - Summary Tab- Additional Details SlideIn
+ROE Main Screen- Roe Tab - InProgress - Summary Tab - Filters
+ROE Main Screen- Roe Tab - Completed with Exceptions ->> Both summary Tab and Errors tab 
+ROE Main Screen- Roe Tab - Completed ->> Only Summary Tab 
+ROE Main Screen- Roe Tab - OnHold- Settlementerror SlideIn
+ROE Main Screen- Void Transactions Tab
+ROE Main Screen- Void Transactions Tab -Filters
+ROE Main Screen- Void Transactions Tab -Voided -Settlement SlideIn"
+>> Gave Fix for : In summary tab applied filters - navigated back to roe tab and again summary tab- click on any record -throwing error. 
+ > Analyzed :In filters in summary tab - Filters payroll account no and serial no - throwing error 
+>> > Completed Analysis and understood the code flow for ROE - UI alignment issue in ROE main page when more than one ERP company code assigned to ADP company code.
+> Made code changes for the grid and also modified the view for the grid in Database so that after each company it displays in the next line in the same column.
+
+> Next week i will complete local testing for ROE ui alignment task and also deploy ROE french translations changes in to DIT and complete testing. and 
+pick up new task to Implement POP UP message when user change the tab in scheduler options slide in. 
