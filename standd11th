@@ -1,3 +1,28 @@
+Sure, here's a point-wise summary of your standout for this week:
+
+1. Connected with Rene to discuss error messages display in ROE sliders.
+2. Gave code fix for Date picker issue in French.
+3. Listed test cases for Datepicker:
+   - Completed local testing for Date picker:
+     - Able to save with different months (checked with all 12).
+     - Selected a date from next month and saved.
+     - Selected a date from allowed range and saved.
+     - Selected a month with special characters and saved a date.
+     - Selected an invalid date: it should not allow saving.
+     - Checked if the date changed is updated and displayed with the English language.
+     - Checked for display of the date on edit for all the above test cases.
+     - Edited and saved for all the services (since the same date picker is used for all).
+4. Made changes for hours in the slider as per feedback from Rene.
+5. Made code changes for statuses display in Additional details (Pending issuance status, Accepted status, Rejected status).
+6. Completed unit testing for ROE UI screens, including various tabs and filters.
+7. Gave fix for issues related to applied filters in the summary tab and analyzed filters causing errors.
+8. Completed analysis and understood the code flow for UI alignment issue in ROE main page.
+9. Made code changes for the grid and modified the view for the grid in the database.
+10. Planned to complete local testing for ROE UI alignment task, deploy ROE French translations changes in DIT, and pick up a new task to implement a popup message when users change tabs in scheduler options slide-in next week.
+
+
+
+
 Give point wise to fill my standout for this week formally for the below
 
 This week i worked on the following tasks:
