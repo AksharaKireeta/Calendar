@@ -1,9 +1,9 @@
+correct the below code it is throwing syntax error
 INSERT INTO ca_record_of_employment.roe_company_codes
 (roe_process_id, company_code, company_name, client_ooid, mapped_erp_company_codes, recieved_date, payroll_system, status, country_iso_code, is_test_mode, created_date)
-VALUES(0, '', '', '', '', '', '', '', '', false, '');
+VALUES( '106','106'),( 'BIO10','BIO10'), ('`bio 10 test6', '`bio 10 test6'),('G39GVNGSWE5XPFCE', 'G39GVNGSWE5XPFCE'),('company_1', 'company_2'),(null,NULL ), ('workday','workday'), (null,null),('CA','CA'), (false,false),( null,null));
 
 
-this is the query to update the values in the columns
-UPDATE ca_record_of_employment.roe_company_codes
-SET roe_process_id=106, company_code='BIO10', company_name='`bio 10 test6', client_ooid='G39GVNGSWE5XPFCE', mapped_erp_company_codes='Company_1', recieved_date=NULL, payroll_system='workday', status=NULL, country_iso_code='CA', is_test_mode=false, created_date=NULL
-WHERE id=127;
+
+
+
