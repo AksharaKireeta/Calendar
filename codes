@@ -1,3 +1,40 @@
+
+INSERT INTO ca_record_of_employment.roe_company_codes
+(roe_process_id, company_code, company_name, client_ooid, mapped_erp_company_codes, received_date, payroll_system, status, country_iso_code, is_test_mode, created_date)
+VALUES 
+('106', 'BIO10', '`bio 10 test6', 'G39GVNGSWE5XPFCE', 'company_1', null, 'workday', null, 'CA', false, null),
+('107', 'BIO11', '`bio 11 test7', 'G39GVNGSWE5XPFCD', 'company_2', null, 'workday', null, 'US', true, null),
+('108', 'BIO12', '`bio 12 test8', 'G39GVNGSWE5XPFCC', 'company_3', null, 'workday', null, 'UK', false, null),
+('109', 'BIO13', '`bio 13 test9', 'G39GVNGSWE5XPFCA', 'company_4', null, 'workday', null, 'AU', true, null),
+('110', 'BIO14', '`bio 14 test10', 'G39GVNGSWE5XPFGB', 'company_5', null, 'workday', null, 'NZ', false, null),
+('111', 'BIO15', '`bio 15 test11', 'G39GVNGSWE5XPFGE', 'company_6', null, 'workday', null, 'JP', true, null),
+('112', 'BIO16', '`bio 16 test12', 'G39GVNGSWE5XPFGA', 'company_7', null, 'workday', null, 'CN', false, null),
+('113', 'BIO17', '`bio 17 test13', 'G39GVNGSWE5XPFGB', 'company_8', null, 'workday', null, 'IN', true, null),
+('114', 'BIO18', '`bio 18 test14', 'G39GVNGSWE5XPFGL', 'company_9', null, 'workday', null, 'FR', false, null),
+('115', 'BIO19', '`bio 19 test15', 'G39GVNGSWE5XPFGB', 'company_10', null, 'workday', null, 'DE', true, null);
+```
+
+This inserts 10 rows into the `roe_company_codes` table with different values for each row. Adjust the values according to your requirements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 correct the below code it is throwing syntax error
 INSERT INTO ca_record_of_employment.roe_company_codes
 (roe_process_id, company_code, company_name, client_ooid, mapped_erp_company_codes, recieved_date, payroll_system, status, country_iso_code, is_test_mode, created_date)
