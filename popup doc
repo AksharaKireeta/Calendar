@@ -1,0 +1,69 @@
+Give formally and elaboratly documentation for the below information as it is:
+
+Problem to solve:
+
+To implement pop up message when user changes tab after editing the data in a tab and not saving. 
+
+Why warning popup:
+
+If there is no warning popup, the user might change the tab and the data edited will not be saved. 
+
+Previously:
+
+
+Even after the save is enabled, if the user clicks on the next tab it switches directly and edited data is not saved.
+
+Requirement Clarification:
+
+Expected UI in Onboarding Interview after editing and clicking on other tab:
+
+
+
+
+
+Detailed Solution:
+
+Code changes in the UI:
+
+Connector Changes:
+
+In the Connector,  
+
+Adding two dispatches for On popup yes click and also on popup no click and innerdispatch tabchange after the popupon yes
+
+popUpOnNo: () => dispatch(onboardingInterviewActions.popUpOnNo()),
+popUpOnYes: () => dispatch((innerDispatch: any, getState: any)=> this.tabchange(innerDispatch, getState)),
+
+
+
+Connector Changes:
+
+export the functions that are in the connector 
+
+popUpOnYes() and popUpOnNo()
+
+
+
+>In the state, define showPopup and popYes both boolean . showPopup is for rendering the popup and popupYes is for whether the click is yes or no after the popup.
+
+ Reducer Changes:
+
+> Initial states for showPopup and popYes set as false.
+
+Changes in the Schedular tab on change: 
+
+>If the save is enabled , popup should be rendered.
+
+>open the tab  for the first time and change the tab then -> showpopup is false, savedisable is true, popupyes is false -→>> In this case, the  'activeSchedularIndex' should be 'action.value' .
+
+>After the Popup is enabled and Yes is clicked showpopup is false, savedisable is true, popupyes is true. In this case, 'activeSchedularIndex' should be 'newState.activeIndex' i.e, the previoustab and the state should be updated to previous state.
+
+>After the Popup is enabled and No is clicked showpopup is false, savedisable is false, popupyes isfalse. In this case, 'activeSchedularIndex' should be the same Index and state should be the newState.
+
+
+
+To make changes in the state after popup yes click and No click , two new cases are added
+
+POP_UP_ON_NO and POP_UP_ON_YES 
+
+In which , After the Popup is enabled and Yes is clicked showpopup is made false, savedisable is made true, popupyes is made true and After the Popup is enabled and No is clicked showpopup is made false, savedisable is made false, popupyes is made false.
