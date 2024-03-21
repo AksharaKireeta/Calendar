@@ -1,3 +1,74 @@
+### Problem Statement:
+
+#### Objective:
+To implement a pop-up message when a user attempts to change tabs after editing data in a tab without saving.
+
+#### Justification:
+Without a warning pop-up, users may inadvertently switch tabs and lose unsaved data.
+
+### Previous Scenario:
+
+Even after enabling saving, if a user clicked on the next tab, it would switch directly without saving edited data.
+
+### Requirement Clarification:
+
+#### Expected UI in Onboarding Interview after Editing and Clicking on Another Tab:
+
+- User interface should display a warning pop-up when attempting to switch tabs after editing data.
+- The pop-up should prompt the user to confirm whether they want to discard unsaved changes or stay on the current tab.
+
+### Detailed Solution:
+
+#### Code Changes in the UI:
+
+##### Connector Changes:
+
+In the Connector:
+
+```typescript
+Adding two dispatches for On popup yes click and also on popup no click and innerdispatch tabchange after the popupon yes
+
+popUpOnNo: () => dispatch(onboardingInterviewActions.popUpOnNo()),
+popUpOnYes: () => dispatch((innerDispatch: any, getState: any)=> this.tabchange(innerDispatch, getState)),
+```
+
+##### Connector Changes:
+
+Export the functions that are in the connector:
+
+```typescript
+popUpOnYes() and popUpOnNo()
+```
+
+#### State Changes:
+
+- In the state, define `showPopup` and `popYes` both as booleans. 
+  - `showPopup` is for rendering the popup.
+  - `popYes` indicates whether the user clicked 'Yes' or 'No' after the popup.
+
+##### Reducer Changes:
+
+- Initial states for `showPopup` and `popYes` set as `false`.
+
+#### Changes in the Scheduler Tab on Change:
+
+- If saving is enabled, the popup should be rendered.
+- When opening the tab for the first time and changing the tab:
+  - `showPopup` is `false`, `saveDisable` is `true`, `popYes` is `false`. In this case, the 'activeSchedularIndex' should be 'action.value'.
+- After the popup is enabled and 'Yes' is clicked:
+  - `showPopup` is `false`, `saveDisable` is `true`, `popYes` is `true`. In this case, 'activeSchedularIndex' should be 'newState.activeIndex', i.e., the previous tab, and the state should be updated to the previous state.
+- After the popup is enabled and 'No' is clicked:
+  - `showPopup` is `false`, `saveDisable` is `false`, `popYes` is `false`. In this case, 'activeSchedularIndex' should be the same index, and the state should remain unchanged.
+
+#### State Changes after Popup Yes/No Click:
+
+To make changes in the state after popup 'Yes' click and 'No' click, two new cases are added: `POP_UP_ON_NO` and `POP_UP_ON_YES`.
+- After the popup is enabled and 'Yes' is clicked:
+  - `showPopup` is made `false`, `saveDisable` is made `true`, `popYes` is made `true`.
+- After the popup is enabled and 'No' is clicked:
+  - `showPopup` is made `false`, `saveDisable` is made `false`, `popYes` is made `false`.
+
+
 Give formally and elaboratly documentation for the below information as it is:
 
 Problem to solve:
