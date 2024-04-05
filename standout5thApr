@@ -1,0 +1,15 @@
+give point wise  formally and effectively to fill standout for this week
+This week I worked on the following tasks:
+> I have deployed the changes to fix date picker in manage documents and 
+completed testing in FIT  and handed over to QA. 
+> I identified an issue while testing that filter based on company code was not working .I have analyzed and made code changes to fix the filter in the manage documents based on company code. 
+> completed testing in local and FIT for the fix for filter based on company code in manage documents.
+>After that I picked the dot part file issue in production
+> I have completed analyzing the code flow for dot part file issue.
+> I have documented the issue, code flow and solution for dot part file and also reviewed it with Pavan.
+> Understood the concepts of file and Thread APIs in java to replicate the issue.
+> I wrote test controller and service to replicate the issue.
+> I faced few challenges in replicating the issue but replicated and gave fix for it
+
+> I also listed out the Net Secure APIs and scopes which we are using in our application regarding the Net Secure APIs updating.
+upcoming week i plan to complete the testing in local and fit for the dot part file issue 
