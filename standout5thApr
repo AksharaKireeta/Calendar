@@ -1,3 +1,23 @@
+To effectively highlight your achievements for this week and outline your plans for the upcoming week, you can structure your points as follows:
+
+**Accomplishments This Week:**
+
+1. Deployed changes to fix the date picker in manage documents and successfully completed testing in FIT, ensuring smooth handover to QA.
+2. Identified and resolved an issue with the filter based on company code in manage documents through thorough analysis and code modifications, subsequently completing testing in both local and FIT environments.
+3. Addressed the dot part file issue in production by analyzing the code flow, documenting the problem and solution, and conducting a review with stakeholders.
+4. Deepened understanding of file and Thread APIs in Java to effectively replicate and address the dot part file issue, overcoming challenges encountered during the process.
+5. Compiled a comprehensive list of Net Secure APIs and scopes utilized in our application, laying the groundwork for upcoming updates and enhancements.
+
+**Plans for Upcoming Week:**
+
+1. Focus on completing testing in both local and FIT environments for the dot part file issue, ensuring thorough validation before proceeding further.
+2. Continuously monitor and address any additional challenges or roadblocks encountered during the testing process, striving for efficient resolution.
+3. Collaborate with team members to finalize and implement any necessary adjustments or improvements identified during testing, fostering a proactive approach to problem-solving.
+4. Stay updated on the latest developments and best practices in software testing and Java development, incorporating new insights and techniques into our workflow as applicable.
+
+
+
+
 give point wise  formally and effectively to fill standout for this week
 This week I worked on the following tasks:
 > I have deployed the changes to fix date picker in manage documents and 
