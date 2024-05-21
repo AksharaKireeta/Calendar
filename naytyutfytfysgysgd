@@ -1,0 +1,14 @@
+case DownloadYetfReportActionTypes.ON_TAX_YEAR_CHANGE: {
+      const newState = { ...state };
+      const taxYearRegExp = "^[0-9]{4}$";
+      newState.yetfReportSearchData.taxYear = action.value;
+      if (!util.isEmpty(newState.yetfReportSearchData.taxYear) &&
+        ((util.isEmpty(newState.yetfReportSearchData.fromDate) && util.isEmpty(newState.yetfReportSearchData.toDate)) ||
+          (!util.isEmpty(newState.yetfReportSearchData.fromDate) && !util.isEmpty(newState.yetfReportSearchData.toDate))) && ) {
+        newState.disableYetfreportbutton = false;
+      }
+      else {
+        newState.disableYetfreportbutton = true;
+      }
+      return newState;
+    }
